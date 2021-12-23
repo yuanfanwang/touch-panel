@@ -1,0 +1,31 @@
+--------------- Build Started: 12/16/2021 10:20:15 Project: wk1, Configuration: ARM GCC 5.4-2016-q2-update Debug ---------------
+The code generation step is up to date.
+arm-none-eabi-gcc.exe -mcpu=cortex-m0plus -mthumb -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0p\ARM_GCC_541\Debug/main.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c main.c -o .\CortexM0p\ARM_GCC_541\Debug\main.o
+main.c: In function 'showElectrodeIsShorted':
+main.c:47:12: warning: unused variable 'val' [-Wunused-variable]
+     uint32 val = CapSense_GetSensorCapacitance(wid, sid, &stateParam);
+            ^
+main.c: In function 'getCapacitanceValueCSD':
+main.c:62:5: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
+     sprintf(res, "%lu", val);
+     ^
+main.c:62:5: warning: incompatible implicit declaration of built-in function 'sprintf'
+main.c:62:5: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+main.c: In function 'getCapacitanceValueCSDDam':
+main.c:70:12: warning: unused variable 'val' [-Wunused-variable]
+     uint32 val = CapSense_GetSensorCapacitance(wid, sid, &state);
+            ^
+main.c:68:10: warning: unused variable 'res' [-Wunused-variable]
+     char res[30];
+          ^
+arm-none-eabi-ar.exe -rs .\CortexM0p\ARM_GCC_541\Debug\wk1.a .\CortexM0p\ARM_GCC_541\Debug\CapSense_Control.o .\CortexM0p\ARM_GCC_541\Debug\CapSense_Processing.o .\CortexM0p\ARM_GCC_541\Debug\CapSense_Structure.o .\CortexM0p\ARM_GCC_541\Debug\CapSense_Tuner.o .\CortexM0p\ARM_GCC_541\Debug\CapSense_Filter.o .\CortexM0p\ARM_GCC_541\Debug\CapSense_Sensing.o .\CortexM0p\ARM_GCC_541\Debug\CapSense_SensingCSX_LL.o .\CortexM0p\ARM_GCC_541\Debug\CapSense_Centroid_LL.o .\CortexM0p\ARM_GCC_541\Debug\CapSense_SelfTest.o .\CortexM0p\ARM_GCC_541\Debug\UART.o .\CortexM0p\ARM_GCC_541\Debug\UART_SPI_UART.o .\CortexM0p\ARM_GCC_541\Debug\UART_SPI_UART_INT.o .\CortexM0p\ARM_GCC_541\Debug\UART_PM.o .\CortexM0p\ARM_GCC_541\Debug\UART_UART.o .\CortexM0p\ARM_GCC_541\Debug\UART_BOOT.o .\CortexM0p\ARM_GCC_541\Debug\UART_UART_BOOT.o .\CortexM0p\ARM_GCC_541\Debug\CapSense_ISR.o .\CortexM0p\ARM_GCC_541\Debug\UART_SCBCLK.o .\CortexM0p\ARM_GCC_541\Debug\UART_tx.o .\CortexM0p\ARM_GCC_541\Debug\UART_tx_PM.o .\CortexM0p\ARM_GCC_541\Debug\UART_rx.o .\CortexM0p\ARM_GCC_541\Debug\UART_rx_PM.o .\CortexM0p\ARM_GCC_541\Debug\CyFlash.o .\CortexM0p\ARM_GCC_541\Debug\CyLib.o .\CortexM0p\ARM_GCC_541\Debug\cyPm.o .\CortexM0p\ARM_GCC_541\Debug\cyutils.o .\CortexM0p\ARM_GCC_541\Debug\CyDMA.o .\CortexM0p\ARM_GCC_541\Debug\CyLFClk.o .\CortexM0p\ARM_GCC_541\Debug\cy_em_eeprom.o .\CortexM0p\ARM_GCC_541\Debug\CyBootAsmGnu.o
+arm-none-eabi-ar.exe: creating .\CortexM0p\ARM_GCC_541\Debug\wk1.a
+arm-none-eabi-gcc.exe -Wl,--start-group -o "\\Mac\Home\Documents\PSoC Creator\touch-panel\CC03\CC03_CSX\wk1.cydsn\CortexM0p\ARM_GCC_541\Debug\wk1.elf" .\CortexM0p\ARM_GCC_541\Debug\main.o .\CortexM0p\ARM_GCC_541\Debug\cyfitter_cfg.o .\CortexM0p\ARM_GCC_541\Debug\cymetadata.o .\CortexM0p\ARM_GCC_541\Debug\Cm0plusStart.o .\CortexM0p\ARM_GCC_541\Debug\wk1.a "C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\CapSense_P4_v7_0\PSoC4\Library\Capsense_P4Library_GCCp.a" -mcpu=cortex-m0plus -mthumb -L Generated_Source\PSoC4 -Wl,-Map,.\CortexM0p\ARM_GCC_541\Debug/wk1.map -T Generated_Source\PSoC4\cm0plusgcc.ld -specs=nano.specs -Wl,--gc-sections -g -ffunction-sections -Og -ffat-lto-objects -Wl,--end-group
+cyelftool.exe -C "\\Mac\Home\Documents\PSoC Creator\touch-panel\CC03\CC03_CSX\wk1.cydsn\CortexM0p\ARM_GCC_541\Debug\wk1.elf" --flash_row_size 256 --flash_size 131072 --flash_offset 0x00000000
+No ELF section .cychecksum found, creating one
+Application checksum calculated and stored in ELF section .cychecksum
+Checksum calculated and stored in ELF section .cymeta
+cyelftool.exe -S "\\Mac\Home\Documents\PSoC Creator\touch-panel\CC03\CC03_CSX\wk1.cydsn\CortexM0p\ARM_GCC_541\Debug\wk1.elf"
+Flash used: 17758 of 131072 bytes (13.5%).
+SRAM used: 3632 of 16384 bytes (22.2%). Stack: 2048 bytes. Heap: 128 bytes.
+--------------- Build Succeeded: 12/16/2021 10:20:19 ---------------

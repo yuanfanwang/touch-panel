@@ -1,0 +1,6 @@
+\\Mac\Home\Documents\PSoC Creator\touch-panel\CC03\CC03_CSX\wk1.cydsn\wk1.cyprj|c7feac0c-3b11-4235-a362-d882ac09abc9
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|32bff333-d80a-4796-b441-0e2a6cae87a9
+\\Mac\Home\Documents\PSoC Creator\4.4\Downloads ( 4.4).cylib\Downloads ( 4.4).cyprj|dd4d0314-ea9d-4911-bc81-0344403540d1
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|9d8422b5-de3f-457d-9e4f-3eeffcec9702
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|10b984ba-220d-4411-9e9e-ec17a22f214f
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|b2fe624f-abfc-4f0a-9320-cb1b79a2e23c

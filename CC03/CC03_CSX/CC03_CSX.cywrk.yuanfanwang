@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CyXmlSerializer>
+<!--This file is machine generated and read. It is not intended to be edited by hand.-->
+<!--Due to this, there is no schema for this file.-->
+<CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21 type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtWrkspcCustomData" version="4">
+<CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997 type_name="CyDesigner.Common.Base.CyCustomData" version="2">
+<userData>
+<dataGuid v="1b906a0f-a7b6-4e4d-a428-82f98b53cb35">
+<CyGuid_1b906a0f-a7b6-4e4d-a428-82f98b53cb35 type_name="CyDesigner.Common.ProjMgmt.GUI.CyExplorerWindow+CyExplorerWindowState" version="3" SelectedTab="Source">
+<TreeKeys>
+<v>Source</v>
+<v>Components</v>
+<v>Output</v>
+</TreeKeys>
+<TreeStates>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="CC03_CSX\wk1\Generated_Source\PSoC4\CapSense\CapSense_Configuration.h">
+<ExpandedNodeIds>
+<v>CC03_CSX</v>
+<v>CC03_CSX\wk1</v>
+<v>CC03_CSX\wk1\TopDesign</v>
+<v>CC03_CSX\wk1\wk1.cydwr</v>
+<v>CC03_CSX\wk1\wk1.cydwr\Pins</v>
+<v>CC03_CSX\wk1\wk1.cydwr\Analog</v>
+<v>CC03_CSX\wk1\wk1.cydwr\Clocks</v>
+<v>CC03_CSX\wk1\wk1.cydwr\Interrupts</v>
+<v>CC03_CSX\wk1\wk1.cydwr\System</v>
+<v>CC03_CSX\wk1\wk1.cydwr\Directives</v>
+<v>CC03_CSX\wk1\wk1.cydwr\Flash Security</v>
+<v>CC03_CSX\wk1\Header Files</v>
+<v>CC03_CSX\wk1\Header Files\cyapicallbacks.h</v>
+<v>CC03_CSX\wk1\Source Files</v>
+<v>CC03_CSX\wk1\Source Files\main.c</v>
+<v>CC03_CSX\wk1\Generated_Source</v>
+<v>CC03_CSX\wk1\Generated_Source\PSoC4</v>
+<v>CC03_CSX\wk1\Generated_Source\PSoC4\CapSense</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>CC03_CSX</v>
+<v>CC03_CSX\wk1</v>
+<v>CC03_CSX\wk1\TopDesign</v>
+<v>CC03_CSX\wk1\wk1.cydwr</v>
+<v>CC03_CSX\wk1\wk1.cydwr\Pins</v>
+<v>CC03_CSX\wk1\wk1.cydwr\Analog</v>
+<v>CC03_CSX\wk1\wk1.cydwr\Clocks</v>
+<v>CC03_CSX\wk1\wk1.cydwr\Interrupts</v>
+<v>CC03_CSX\wk1\wk1.cydwr\System</v>
+<v>CC03_CSX\wk1\wk1.cydwr\Directives</v>
+<v>CC03_CSX\wk1\wk1.cydwr\Flash Security</v>
+<v>CC03_CSX\wk1\Header Files</v>
+<v>CC03_CSX\wk1\Header Files\cyapicallbacks.h</v>
+<v>CC03_CSX\wk1\Source Files</v>
+<v>CC03_CSX\wk1\Source Files\main.c</v>
+<v>CC03_CSX\wk1\Generated_Source</v>
+<v>CC03_CSX\wk1\Generated_Source\PSoC4</v>
+<v>CC03_CSX\wk1\Generated_Source\PSoC4\CapSense</v>
+<v>CC03_CSX\wk1\Generated_Source\PSoC4\CapSense\CapSense.h</v>
+<v>CC03_CSX\wk1\Generated_Source\PSoC4\CapSense\CapSense_Centroid_LL.c</v>
+<v>CC03_CSX\wk1\Generated_Source\PSoC4\CapSense\CapSense_Centroid_LL.h</v>
+<v>CC03_CSX\wk1\Generated_Source\PSoC4\CapSense\CapSense_Configuration.h</v>
+<v>CC03_CSX\wk1\Generated_Source\PSoC4\CapSense\CapSense_Control.c</v>
+<v>CC03_CSX\wk1\Generated_Source\PSoC4\CapSense\CapSense_Control.h</v>
+<v>CC03_CSX\wk1\Generated_Source\PSoC4\CapSense\CapSense_Filter.c</v>
+<v>CC03_CSX\wk1\Generated_Source\PSoC4\CapSense\CapSense_Filter.h</v>
+<v>CC03_CSX\wk1\Generated_Source\PSoC4\CapSense\CapSense_Processing.c</v>
+<v>CC03_CSX\wk1\Generated_Source\PSoC4\CapSense\CapSense_Processing.h</v>
+<v>CC03_CSX\wk1\Generated_Source\PSoC4\CapSense\CapSense_RegisterMap.h</v>
+<v>CC03_CSX\wk1\Generated_Source\PSoC4\CapSense\CapSense_SelfTest.c</v>
+<v>CC03_CSX\wk1\Generated_Source\PSoC4\CapSense\CapSense_SelfTest.h</v>
+<v>CC03_CSX\wk1\Generated_Source\PSoC4\CapSense\CapSense_Sensing.c</v>
+<v>CC03_CSX\wk1\Generated_Source\PSoC4\CapSense\CapSense_Sensing.h</v>
+<v>CC03_CSX\wk1\Generated_Source\PSoC4\CapSense\CapSense_SensingCSX_LL.c</v>
+<v>CC03_CSX\wk1\Generated_Source\PSoC4\CapSense\CapSense_SensingCSX_LL.h</v>
+<v>CC03_CSX\wk1\Generated_Source\PSoC4\CapSense\CapSense_Structure.c</v>
+<v>CC03_CSX\wk1\Generated_Source\PSoC4\CapSense\CapSense_Structure.h</v>
+<v>CC03_CSX\wk1\Generated_Source\PSoC4\CapSense\CapSense_Tuner.c</v>
+<v>CC03_CSX\wk1\Generated_Source\PSoC4\CapSense\CapSense_Tuner.h</v>
+<v>CC03_CSX\wk1\Generated_Source\PSoC4\CapSense_ISR</v>
+<v>CC03_CSX\wk1\Generated_Source\PSoC4\cy_boot</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="CC03_CSX\wk1\TopDesign\TopDesign.cysch">
+<ExpandedNodeIds>
+<v>CC03_CSX</v>
+<v>CC03_CSX\wk1</v>
+<v>CC03_CSX\wk1\TopDesign</v>
+<v>CC03_CSX\wk1\TopDesign\TopDesign.cysch</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>CC03_CSX</v>
+<v>CC03_CSX\wk1</v>
+<v>CC03_CSX\wk1\TopDesign</v>
+<v>CC03_CSX\wk1\TopDesign\TopDesign.cysch</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>CC03_CSX</v>
+<v>CC03_CSX\wk1</v>
+<v>CC03_CSX\wk1\CortexM0p</v>
+<v>CC03_CSX\wk1\CortexM0p\ARM_GCC_541</v>
+<v>CC03_CSX\wk1\CortexM0p\ARM_GCC_541\Debug</v>
+<v>CC03_CSX\wk1\CortexM0p\ARM_GCC_541\Debug\Listing Files</v>
+<v>CC03_CSX\wk1\CortexM0p\ARM_GCC_541\Debug\Listing Files\CapSense_Centroid_LL.lst</v>
+<v>CC03_CSX\wk1\CortexM0p\ARM_GCC_541\Debug\Listing Files\CapSense_Control.lst</v>
+<v>CC03_CSX\wk1\CortexM0p\ARM_GCC_541\Debug\Listing Files\CapSense_Filter.lst</v>
+<v>CC03_CSX\wk1\CortexM0p\ARM_GCC_541\Debug\Listing Files\CapSense_ISR.lst</v>
+<v>CC03_CSX\wk1\CortexM0p\ARM_GCC_541\Debug\Listing Files\CapSense_Processing.lst</v>
+<v>CC03_CSX\wk1\CortexM0p\ARM_GCC_541\Debug\Listing Files\CapSense_SelfTest.lst</v>
+<v>CC03_CSX\wk1\CortexM0p\ARM_GCC_541\Debug\Listing Files\CapSense_Sensing.lst</v>
+<v>CC03_CSX\wk1\CortexM0p\ARM_GCC_541\Debug\Listing Files\CapSense_SensingCSX_LL.lst</v>
+<v>CC03_CSX\wk1\CortexM0p\ARM_GCC_541\Debug\Listing Files\CapSense_Structure.lst</v>
+<v>CC03_CSX\wk1\CortexM0p\ARM_GCC_541\Debug\Listing Files\CapSense_Tuner.lst</v>
+<v>CC03_CSX\wk1\CortexM0p\ARM_GCC_541\Debug\Listing Files\Cm0plusStart.lst</v>
+<v>CC03_CSX\wk1\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
+<v>CC03_CSX\wk1\CortexM0p\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>CC03_CSX\wk1\CortexM0p\ARM_GCC_541\Debug\Listing Files\CyDMA.lst</v>
+<v>CC03_CSX\wk1\CortexM0p\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>CC03_CSX\wk1\CortexM0p\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
+<v>CC03_CSX\wk1\CortexM0p\ARM_GCC_541\Debug\Listing Files\CyLFClk.lst</v>
+<v>CC03_CSX\wk1\CortexM0p\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
+<v>CC03_CSX\wk1\CortexM0p\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
+<v>CC03_CSX\wk1\CortexM0p\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
+<v>CC03_CSX\wk1\CortexM0p\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
+<v>CC03_CSX\wk1\CortexM0p\ARM_GCC_541\Debug\Listing Files\main.lst</v>
+<v>CC03_CSX\wk1\CortexM0p\ARM_GCC_541\Debug\Listing Files\UART.lst</v>
+<v>CC03_CSX\wk1\CortexM0p\ARM_GCC_541\Debug\Listing Files\UART_BOOT.lst</v>
+<v>CC03_CSX\wk1\CortexM0p\ARM_GCC_541\Debug\Listing Files\UART_PM.lst</v>
+<v>CC03_CSX\wk1\CortexM0p\ARM_GCC_541\Debug\Listing Files\UART_rx.lst</v>
+<v>CC03_CSX\wk1\CortexM0p\ARM_GCC_541\Debug\Listing Files\UART_rx_PM.lst</v>
+<v>CC03_CSX\wk1\CortexM0p\ARM_GCC_541\Debug\Listing Files\UART_SCBCLK.lst</v>
+<v>CC03_CSX\wk1\CortexM0p\ARM_GCC_541\Debug\Listing Files\UART_SPI_UART.lst</v>
+<v>CC03_CSX\wk1\CortexM0p\ARM_GCC_541\Debug\Listing Files\UART_SPI_UART_INT.lst</v>
+<v>CC03_CSX\wk1\CortexM0p\ARM_GCC_541\Debug\Listing Files\UART_tx.lst</v>
+<v>CC03_CSX\wk1\CortexM0p\ARM_GCC_541\Debug\Listing Files\UART_tx_PM.lst</v>
+<v>CC03_CSX\wk1\CortexM0p\ARM_GCC_541\Debug\Listing Files\UART_UART.lst</v>
+<v>CC03_CSX\wk1\CortexM0p\ARM_GCC_541\Debug\Listing Files\UART_UART_BOOT.lst</v>
+<v>CC03_CSX\wk1\CortexM0p\ARM_GCC_541\Debug\wk1.elf</v>
+<v>CC03_CSX\wk1\CortexM0p\ARM_GCC_541\Debug\wk1.hex</v>
+<v>CC03_CSX\wk1\CortexM0p\ARM_GCC_541\Debug\wk1.map</v>
+<v>CC03_CSX\wk1\wk1.gpdsc</v>
+<v>CC03_CSX\wk1\wk1.rpt</v>
+<v>CC03_CSX\wk1\wk1_timing.html</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>CC03_CSX</v>
+<v>CC03_CSX\wk1</v>
+<v>CC03_CSX\wk1\CortexM0p</v>
+<v>CC03_CSX\wk1\CortexM0p\ARM_GCC_541</v>
+<v>CC03_CSX\wk1\CortexM0p\ARM_GCC_541\Debug</v>
+<v>CC03_CSX\wk1\CortexM0p\ARM_GCC_541\Debug\Listing Files</v>
+<v>CC03_CSX\wk1\CortexM0p\ARM_GCC_541\Debug\Listing Files\CapSense_Centroid_LL.lst</v>
+<v>CC03_CSX\wk1\CortexM0p\ARM_GCC_541\Debug\Listing Files\CapSense_Control.lst</v>
+<v>CC03_CSX\wk1\CortexM0p\ARM_GCC_541\Debug\Listing Files\CapSense_Filter.lst</v>
+<v>CC03_CSX\wk1\CortexM0p\ARM_GCC_541\Debug\Listing Files\CapSense_ISR.lst</v>
+<v>CC03_CSX\wk1\CortexM0p\ARM_GCC_541\Debug\Listing Files\CapSense_Processing.lst</v>
+<v>CC03_CSX\wk1\CortexM0p\ARM_GCC_541\Debug\Listing Files\CapSense_SelfTest.lst</v>
+<v>CC03_CSX\wk1\CortexM0p\ARM_GCC_541\Debug\Listing Files\CapSense_Sensing.lst</v>
+<v>CC03_CSX\wk1\CortexM0p\ARM_GCC_541\Debug\Listing Files\CapSense_SensingCSX_LL.lst</v>
+<v>CC03_CSX\wk1\CortexM0p\ARM_GCC_541\Debug\Listing Files\CapSense_Structure.lst</v>
+<v>CC03_CSX\wk1\CortexM0p\ARM_GCC_541\Debug\Listing Files\CapSense_Tuner.lst</v>
+<v>CC03_CSX\wk1\CortexM0p\ARM_GCC_541\Debug\Listing Files\Cm0plusStart.lst</v>
+<v>CC03_CSX\wk1\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
+<v>CC03_CSX\wk1\CortexM0p\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>CC03_CSX\wk1\CortexM0p\ARM_GCC_541\Debug\Listing Files\CyDMA.lst</v>
+<v>CC03_CSX\wk1\CortexM0p\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>CC03_CSX\wk1\CortexM0p\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
+<v>CC03_CSX\wk1\CortexM0p\ARM_GCC_541\Debug\Listing Files\CyLFClk.lst</v>
+<v>CC03_CSX\wk1\CortexM0p\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
+<v>CC03_CSX\wk1\CortexM0p\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
+<v>CC03_CSX\wk1\CortexM0p\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
+<v>CC03_CSX\wk1\CortexM0p\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
+<v>CC03_CSX\wk1\CortexM0p\ARM_GCC_541\Debug\Listing Files\main.lst</v>
+<v>CC03_CSX\wk1\CortexM0p\ARM_GCC_541\Debug\Listing Files\UART.lst</v>
+<v>CC03_CSX\wk1\CortexM0p\ARM_GCC_541\Debug\Listing Files\UART_BOOT.lst</v>
+<v>CC03_CSX\wk1\CortexM0p\ARM_GCC_541\Debug\Listing Files\UART_PM.lst</v>
+<v>CC03_CSX\wk1\CortexM0p\ARM_GCC_541\Debug\Listing Files\UART_rx.lst</v>
+<v>CC03_CSX\wk1\CortexM0p\ARM_GCC_541\Debug\Listing Files\UART_rx_PM.lst</v>
+<v>CC03_CSX\wk1\CortexM0p\ARM_GCC_541\Debug\Listing Files\UART_SCBCLK.lst</v>
+<v>CC03_CSX\wk1\CortexM0p\ARM_GCC_541\Debug\Listing Files\UART_SPI_UART.lst</v>
+<v>CC03_CSX\wk1\CortexM0p\ARM_GCC_541\Debug\Listing Files\UART_SPI_UART_INT.lst</v>
+<v>CC03_CSX\wk1\CortexM0p\ARM_GCC_541\Debug\Listing Files\UART_tx.lst</v>
+<v>CC03_CSX\wk1\CortexM0p\ARM_GCC_541\Debug\Listing Files\UART_tx_PM.lst</v>
+<v>CC03_CSX\wk1\CortexM0p\ARM_GCC_541\Debug\Listing Files\UART_UART.lst</v>
+<v>CC03_CSX\wk1\CortexM0p\ARM_GCC_541\Debug\Listing Files\UART_UART_BOOT.lst</v>
+<v>CC03_CSX\wk1\CortexM0p\ARM_GCC_541\Debug\wk1.elf</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+</TreeStates>
+<TreeKeysV2>
+<v>Datasheet</v>
+</TreeKeysV2>
+<TreeStatesV2>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>CC03_CSX</v>
+<v>CC03_CSX\wk1</v>
+<v>CC03_CSX\wk1\PSoC 4 Architecture TRM</v>
+<v>CC03_CSX\wk1\System Reference Guides</v>
+<v>CC03_CSX\wk1\System Reference Guides\cy_boot_v6_0</v>
+<v>CC03_CSX\wk1\System Reference Guides\cy_dmac_v1_10</v>
+<v>CC03_CSX\wk1\System Reference Guides\cy_lfclk_v1_20</v>
+<v>CC03_CSX\wk1\CapSense_P4_v7_0.pdf</v>
+<v>CC03_CSX\wk1\SCB_P4_v4_0.pdf</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>CC03_CSX</v>
+<v>CC03_CSX\wk1</v>
+<v>CC03_CSX\wk1\PSoC 4 Architecture TRM</v>
+<v>CC03_CSX\wk1\System Reference Guides</v>
+<v>CC03_CSX\wk1\System Reference Guides\cy_boot_v6_0</v>
+<v>CC03_CSX\wk1\System Reference Guides\cy_dmac_v1_10</v>
+<v>CC03_CSX\wk1\System Reference Guides\cy_lfclk_v1_20</v>
+<v>CC03_CSX\wk1\CapSense_P4_v7_0.pdf</v>
+<v>CC03_CSX\wk1\SCB_P4_v4_0.pdf</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+</TreeStatesV2>
+</CyGuid_1b906a0f-a7b6-4e4d-a428-82f98b53cb35>
+</dataGuid>
+</userData>
+</CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997>
+<Unloaded />
+<OpenDocs>
+<name v=".\wk1.cydsn\main.c" />
+<name v=".\wk1.cydsn\TopDesign\TopDesign.cysch" />
+<name v=".\wk1.cydsn\wk1.cydwr" />
+<name v=".\wk1.cydsn\Generated_Source\PSoC4\CapSense_Configuration.h" />
+</OpenDocs>
+<OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
+
+  Actipro Docking/MDI for WinForms
+  Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
+  http://www.actiprosoftware.com
+
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="871, 511" SelectedTabbedMdiWindow="f0d025a6-7c01-4464-8523-682eeeff71c7"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="857df685-b26e-4657-8afc-9d7775ac6c9c" /><DocumentWindow Key="\\Mac\Home\Documents\PSoC Creator\touch-panel\CC03\CC03_CSX\wk1.cydsn\main.c" Guid="f0d025a6-7c01-4464-8523-682eeeff71c7" /><DocumentWindow Key="\\Mac\Home\Documents\PSoC Creator\touch-panel\CC03\CC03_CSX\wk1.cydsn\TopDesign\TopDesign.cysch" Guid="dcd60b80-e968-4650-b55d-c098d1257db0" /><DocumentWindow Key="\\Mac\Home\Documents\PSoC Creator\touch-panel\CC03\CC03_CSX\wk1.cydsn\wk1.cydwr" Guid="bca4d627-c7f7-4105-982e-8328b4904ae0" /><DocumentWindow Key="\\Mac\Home\Documents\PSoC Creator\touch-panel\CC03\CC03_CSX\wk1.cydsn\Generated_Source\PSoC4\CapSense_Configuration.h" Guid="2f9d2bab-83be-4930-9b05-beec193f0f3d" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+<config v="" />
+<AutoUpdate v="true" />
+</CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>
+</CyXmlSerializer>

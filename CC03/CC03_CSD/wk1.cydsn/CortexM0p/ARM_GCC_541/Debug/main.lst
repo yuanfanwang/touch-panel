@@ -1,0 +1,2465 @@
+ARM GAS  C:\Users\YUANFA~1\AppData\Local\Temp\ccFPSgYX.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m0plus
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 0
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"main.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text.print,"ax",%progbits
+  20              		.align	2
+  21              		.global	print
+  22              		.code	16
+  23              		.thumb_func
+  24              		.type	print, %function
+  25              	print:
+  26              	.LFB33:
+  27              		.file 1 "main.c"
+   1:main.c        **** /* ========================================
+   2:main.c        ****  *
+   3:main.c        ****  * Copyright YOUR COMPANY, THE YEAR
+   4:main.c        ****  * All Rights Reserved
+   5:main.c        ****  * UNPUBLISHED, LICENSED SOFTWARE.
+   6:main.c        ****  *
+   7:main.c        ****  * CONFIDENTIAL AND PROPRIETARY INFORMATION
+   8:main.c        ****  * WHICH IS THE PROPERTY OF your company.
+   9:main.c        ****  *
+  10:main.c        ****  * ========================================
+  11:main.c        **** */
+  12:main.c        **** #include "project.h"
+  13:main.c        **** 
+  14:main.c        **** void print(char* msg) {
+  28              		.loc 1 14 0
+  29              		.cfi_startproc
+  30              		@ args = 0, pretend = 0, frame = 0
+  31              		@ frame_needed = 0, uses_anonymous_args = 0
+  32              	.LVL0:
+  33 0000 10B5     		push	{r4, lr}
+  34              		.cfi_def_cfa_offset 8
+  35              		.cfi_offset 4, -8
+  36              		.cfi_offset 14, -4
+  15:main.c        ****     UART_UartPutString(msg);
+  37              		.loc 1 15 0
+  38 0002 FFF7FEFF 		bl	UART_UartPutString
+  39              	.LVL1:
+  16:main.c        ****     UART_UartPutString("\r\n");
+  40              		.loc 1 16 0
+  41 0006 0248     		ldr	r0, .L2
+ARM GAS  C:\Users\YUANFA~1\AppData\Local\Temp\ccFPSgYX.s 			page 2
+
+
+  42 0008 FFF7FEFF 		bl	UART_UartPutString
+  43              	.LVL2:
+  17:main.c        **** }
+  44              		.loc 1 17 0
+  45              		@ sp needed
+  46 000c 10BD     		pop	{r4, pc}
+  47              	.L3:
+  48 000e C046     		.align	2
+  49              	.L2:
+  50 0010 00000000 		.word	.LC0
+  51              		.cfi_endproc
+  52              	.LFE33:
+  53              		.size	print, .-print
+  54              		.section	.text.getCapSenseState,"ax",%progbits
+  55              		.align	2
+  56              		.global	getCapSenseState
+  57              		.code	16
+  58              		.thumb_func
+  59              		.type	getCapSenseState, %function
+  60              	getCapSenseState:
+  61              	.LFB34:
+  18:main.c        **** 
+  19:main.c        **** void getCapSenseState(CapSense_TST_MEASUREMENT_STATUS_ENUM state) {
+  62              		.loc 1 19 0
+  63              		.cfi_startproc
+  64              		@ args = 0, pretend = 0, frame = 0
+  65              		@ frame_needed = 0, uses_anonymous_args = 0
+  66              	.LVL3:
+  67 0000 10B5     		push	{r4, lr}
+  68              		.cfi_def_cfa_offset 8
+  69              		.cfi_offset 4, -8
+  70              		.cfi_offset 14, -4
+  20:main.c        ****     switch (state) {
+  71              		.loc 1 20 0
+  72 0002 0528     		cmp	r0, #5
+  73 0004 17D8     		bhi	.L5
+  74 0006 8000     		lsls	r0, r0, #2
+  75              	.LVL4:
+  76 0008 0D4B     		ldr	r3, .L13
+  77 000a 1B58     		ldr	r3, [r3, r0]
+  78 000c 9F46     		mov	pc, r3
+  79              		.section	.rodata
+  80              		.align	2
+  81              	.L7:
+  82 0000 0E000000 		.word	.L6
+  83 0004 16000000 		.word	.L8
+  84 0008 36000000 		.word	.L5
+  85 000c 2E000000 		.word	.L9
+  86 0010 1E000000 		.word	.L10
+  87 0014 26000000 		.word	.L11
+  88              		.section	.text.getCapSenseState
+  89              	.L6:
+  21:main.c        ****         case CapSense_TST_MEASUREMENT_SUCCESS:
+  22:main.c        ****             print("SUCCESS");
+  90              		.loc 1 22 0
+  91 000e 0D48     		ldr	r0, .L13+4
+  92 0010 FFF7FEFF 		bl	print
+ARM GAS  C:\Users\YUANFA~1\AppData\Local\Temp\ccFPSgYX.s 			page 3
+
+
+  93              	.LVL5:
+  23:main.c        ****             break;
+  94              		.loc 1 23 0
+  95 0014 12E0     		b	.L4
+  96              	.L8:
+  24:main.c        ****         case CapSense_TST_MEASUREMENT_BAD_PARAM:
+  25:main.c        ****             print("BAD_PARAM");
+  97              		.loc 1 25 0
+  98 0016 0C48     		ldr	r0, .L13+8
+  99 0018 FFF7FEFF 		bl	print
+ 100              	.LVL6:
+  26:main.c        ****             break;
+ 101              		.loc 1 26 0
+ 102 001c 0EE0     		b	.L4
+ 103              	.L10:
+  27:main.c        ****         case CapSense_TST_MEASUREMENT_LOW_LIMIT:
+  28:main.c        ****             print("LOW_LIMIT");
+ 104              		.loc 1 28 0
+ 105 001e 0B48     		ldr	r0, .L13+12
+ 106 0020 FFF7FEFF 		bl	print
+ 107              	.LVL7:
+  29:main.c        ****             break;
+ 108              		.loc 1 29 0
+ 109 0024 0AE0     		b	.L4
+ 110              	.L11:
+  30:main.c        ****         case CapSense_TST_MEASUREMENT_HIGH_LIMIT:
+  31:main.c        ****             print("HIGH_LIMIT");
+ 111              		.loc 1 31 0
+ 112 0026 0A48     		ldr	r0, .L13+16
+ 113 0028 FFF7FEFF 		bl	print
+ 114              	.LVL8:
+  32:main.c        ****             break;
+ 115              		.loc 1 32 0
+ 116 002c 06E0     		b	.L4
+ 117              	.L9:
+  33:main.c        ****         case CapSense_TST_MEASUREMENT_ERROR:
+  34:main.c        ****             print("ERROR");
+ 118              		.loc 1 34 0
+ 119 002e 0948     		ldr	r0, .L13+20
+ 120 0030 FFF7FEFF 		bl	print
+ 121              	.LVL9:
+  35:main.c        ****             break;
+ 122              		.loc 1 35 0
+ 123 0034 02E0     		b	.L4
+ 124              	.L5:
+  36:main.c        ****         default:
+  37:main.c        ****             print("what?");
+ 125              		.loc 1 37 0
+ 126 0036 0848     		ldr	r0, .L13+24
+ 127 0038 FFF7FEFF 		bl	print
+ 128              	.LVL10:
+ 129              	.L4:
+  38:main.c        ****     }
+  39:main.c        **** }
+ 130              		.loc 1 39 0
+ 131              		@ sp needed
+ 132 003c 10BD     		pop	{r4, pc}
+ARM GAS  C:\Users\YUANFA~1\AppData\Local\Temp\ccFPSgYX.s 			page 4
+
+
+ 133              	.L14:
+ 134 003e C046     		.align	2
+ 135              	.L13:
+ 136 0040 00000000 		.word	.L7
+ 137 0044 04000000 		.word	.LC3
+ 138 0048 0C000000 		.word	.LC5
+ 139 004c 18000000 		.word	.LC7
+ 140 0050 24000000 		.word	.LC9
+ 141 0054 30000000 		.word	.LC11
+ 142 0058 38000000 		.word	.LC13
+ 143              		.cfi_endproc
+ 144              	.LFE34:
+ 145              		.size	getCapSenseState, .-getCapSenseState
+ 146              		.section	.text.showElectrodeIsShorted,"ax",%progbits
+ 147              		.align	2
+ 148              		.global	showElectrodeIsShorted
+ 149              		.code	16
+ 150              		.thumb_func
+ 151              		.type	showElectrodeIsShorted, %function
+ 152              	showElectrodeIsShorted:
+ 153              	.LFB35:
+  40:main.c        **** 
+  41:main.c        **** void showElectrodeIsShorted(uint32 wid, uint32 sid) {
+ 154              		.loc 1 41 0
+ 155              		.cfi_startproc
+ 156              		@ args = 0, pretend = 0, frame = 8
+ 157              		@ frame_needed = 0, uses_anonymous_args = 0
+ 158              	.LVL11:
+ 159 0000 70B5     		push	{r4, r5, r6, lr}
+ 160              		.cfi_def_cfa_offset 16
+ 161              		.cfi_offset 4, -16
+ 162              		.cfi_offset 5, -12
+ 163              		.cfi_offset 6, -8
+ 164              		.cfi_offset 14, -4
+ 165 0002 82B0     		sub	sp, sp, #8
+ 166              		.cfi_def_cfa_offset 24
+ 167 0004 0500     		movs	r5, r0
+ 168 0006 0E00     		movs	r6, r1
+  42:main.c        ****     CapSense_TST_MEASUREMENT_STATUS_ENUM stateParam;
+  43:main.c        ****     uint32 val = CapSense_GetSensorCapacitance(wid, sid, &stateParam);
+ 169              		.loc 1 43 0
+ 170 0008 6B46     		mov	r3, sp
+ 171 000a DC1D     		adds	r4, r3, #7
+ 172 000c 2200     		movs	r2, r4
+ 173 000e FFF7FEFF 		bl	CapSense_GetSensorCapacitance
+ 174              	.LVL12:
+  44:main.c        ****     uint32 stateElectrode = CapSense_CheckIntegritySensorPins(wid, sid);
+ 175              		.loc 1 44 0
+ 176 0012 3100     		movs	r1, r6
+ 177 0014 2800     		movs	r0, r5
+ 178 0016 FFF7FEFF 		bl	CapSense_CheckIntegritySensorPins
+ 179              	.LVL13:
+ 180 001a 0500     		movs	r5, r0
+ 181              	.LVL14:
+  45:main.c        ****     getCapSenseState(stateParam);
+ 182              		.loc 1 45 0
+ 183 001c 2078     		ldrb	r0, [r4]
+ARM GAS  C:\Users\YUANFA~1\AppData\Local\Temp\ccFPSgYX.s 			page 5
+
+
+ 184              	.LVL15:
+ 185 001e FFF7FEFF 		bl	getCapSenseState
+ 186              	.LVL16:
+  46:main.c        ****     UART_UartPutString(" ");
+ 187              		.loc 1 46 0
+ 188 0022 0C48     		ldr	r0, .L19
+ 189 0024 FFF7FEFF 		bl	UART_UartPutString
+ 190              	.LVL17:
+  47:main.c        ****     if (stateElectrode == CYRET_SUCCESS) UART_UartPutString("SUCCESS");
+ 191              		.loc 1 47 0
+ 192 0028 002D     		cmp	r5, #0
+ 193 002a 03D1     		bne	.L16
+ 194              		.loc 1 47 0 is_stmt 0 discriminator 1
+ 195 002c 0A48     		ldr	r0, .L19+4
+ 196 002e FFF7FEFF 		bl	UART_UartPutString
+ 197              	.LVL18:
+ 198 0032 0AE0     		b	.L17
+ 199              	.L16:
+  48:main.c        ****     else if (stateElectrode == CapSense_TST_SNS_SHORT) UART_UartPutString("SHORT");
+ 200              		.loc 1 48 0 is_stmt 1
+ 201 0034 8023     		movs	r3, #128
+ 202 0036 5B00     		lsls	r3, r3, #1
+ 203 0038 9D42     		cmp	r5, r3
+ 204 003a 03D1     		bne	.L18
+ 205              		.loc 1 48 0 is_stmt 0 discriminator 1
+ 206 003c 0748     		ldr	r0, .L19+8
+ 207 003e FFF7FEFF 		bl	UART_UartPutString
+ 208              	.LVL19:
+ 209 0042 02E0     		b	.L17
+ 210              	.L18:
+  49:main.c        ****     else UART_UartPutString("BAD");
+ 211              		.loc 1 49 0 is_stmt 1
+ 212 0044 0648     		ldr	r0, .L19+12
+ 213 0046 FFF7FEFF 		bl	UART_UartPutString
+ 214              	.LVL20:
+ 215              	.L17:
+  50:main.c        ****     UART_UartPutString("\r\n");
+ 216              		.loc 1 50 0
+ 217 004a 0648     		ldr	r0, .L19+16
+ 218 004c FFF7FEFF 		bl	UART_UartPutString
+ 219              	.LVL21:
+  51:main.c        **** }
+ 220              		.loc 1 51 0
+ 221 0050 02B0     		add	sp, sp, #8
+ 222              		@ sp needed
+ 223              	.LVL22:
+ 224              	.LVL23:
+ 225 0052 70BD     		pop	{r4, r5, r6, pc}
+ 226              	.L20:
+ 227              		.align	2
+ 228              	.L19:
+ 229 0054 40000000 		.word	.LC15
+ 230 0058 04000000 		.word	.LC3
+ 231 005c 44000000 		.word	.LC18
+ 232 0060 4C000000 		.word	.LC20
+ 233 0064 00000000 		.word	.LC0
+ 234              		.cfi_endproc
+ARM GAS  C:\Users\YUANFA~1\AppData\Local\Temp\ccFPSgYX.s 			page 6
+
+
+ 235              	.LFE35:
+ 236              		.size	showElectrodeIsShorted, .-showElectrodeIsShorted
+ 237              		.section	.text.getCapacitanceValueCSD,"ax",%progbits
+ 238              		.align	2
+ 239              		.global	getCapacitanceValueCSD
+ 240              		.code	16
+ 241              		.thumb_func
+ 242              		.type	getCapacitanceValueCSD, %function
+ 243              	getCapacitanceValueCSD:
+ 244              	.LFB36:
+  52:main.c        **** 
+  53:main.c        **** void getCapacitanceValueCSD(uint32 wid, uint32 sid) {
+ 245              		.loc 1 53 0
+ 246              		.cfi_startproc
+ 247              		@ args = 0, pretend = 0, frame = 40
+ 248              		@ frame_needed = 0, uses_anonymous_args = 0
+ 249              	.LVL24:
+ 250 0000 00B5     		push	{lr}
+ 251              		.cfi_def_cfa_offset 4
+ 252              		.cfi_offset 14, -4
+ 253 0002 8BB0     		sub	sp, sp, #44
+ 254              		.cfi_def_cfa_offset 48
+  54:main.c        ****     char res[30];
+  55:main.c        ****     CapSense_TST_MEASUREMENT_STATUS_ENUM state;
+  56:main.c        ****     uint32 val = CapSense_GetSensorCapacitance(wid, sid, &state);
+ 255              		.loc 1 56 0
+ 256 0004 6B46     		mov	r3, sp
+ 257 0006 DA1D     		adds	r2, r3, #7
+ 258 0008 FFF7FEFF 		bl	CapSense_GetSensorCapacitance
+ 259              	.LVL25:
+ 260 000c 0200     		movs	r2, r0
+ 261              	.LVL26:
+  57:main.c        ****     sprintf(res, "%lu", val);
+ 262              		.loc 1 57 0
+ 263 000e 0649     		ldr	r1, .L22
+ 264 0010 02A8     		add	r0, sp, #8
+ 265              	.LVL27:
+ 266 0012 FFF7FEFF 		bl	sprintf
+ 267              	.LVL28:
+  58:main.c        ****     UART_UartPutString(res);
+ 268              		.loc 1 58 0
+ 269 0016 02A8     		add	r0, sp, #8
+ 270 0018 FFF7FEFF 		bl	UART_UartPutString
+ 271              	.LVL29:
+  59:main.c        ****     UART_UartPutString(" ");
+ 272              		.loc 1 59 0
+ 273 001c 0348     		ldr	r0, .L22+4
+ 274 001e FFF7FEFF 		bl	UART_UartPutString
+ 275              	.LVL30:
+  60:main.c        **** }
+ 276              		.loc 1 60 0
+ 277 0022 0BB0     		add	sp, sp, #44
+ 278              		@ sp needed
+ 279 0024 00BD     		pop	{pc}
+ 280              	.L23:
+ 281 0026 C046     		.align	2
+ 282              	.L22:
+ARM GAS  C:\Users\YUANFA~1\AppData\Local\Temp\ccFPSgYX.s 			page 7
+
+
+ 283 0028 50000000 		.word	.LC23
+ 284 002c 40000000 		.word	.LC15
+ 285              		.cfi_endproc
+ 286              	.LFE36:
+ 287              		.size	getCapacitanceValueCSD, .-getCapacitanceValueCSD
+ 288              		.section	.text.PrintAll,"ax",%progbits
+ 289              		.align	2
+ 290              		.global	PrintAll
+ 291              		.code	16
+ 292              		.thumb_func
+ 293              		.type	PrintAll, %function
+ 294              	PrintAll:
+ 295              	.LFB37:
+  61:main.c        **** 
+  62:main.c        **** void PrintAll(){
+ 296              		.loc 1 62 0
+ 297              		.cfi_startproc
+ 298              		@ args = 0, pretend = 0, frame = 0
+ 299              		@ frame_needed = 0, uses_anonymous_args = 0
+ 300 0000 10B5     		push	{r4, lr}
+ 301              		.cfi_def_cfa_offset 8
+ 302              		.cfi_offset 4, -8
+ 303              		.cfi_offset 14, -4
+  63:main.c        ****     getCapacitanceValueCSD(CapSense_BUTTON0_WDGT_ID, CapSense_BUTTON0_SNS0_ID);
+ 304              		.loc 1 63 0
+ 305 0002 0021     		movs	r1, #0
+ 306 0004 0020     		movs	r0, #0
+ 307 0006 FFF7FEFF 		bl	getCapacitanceValueCSD
+ 308              	.LVL31:
+  64:main.c        ****     getCapacitanceValueCSD(CapSense_BUTTON1_WDGT_ID, CapSense_BUTTON1_SNS0_ID);
+ 309              		.loc 1 64 0
+ 310 000a 0021     		movs	r1, #0
+ 311 000c 0120     		movs	r0, #1
+ 312 000e FFF7FEFF 		bl	getCapacitanceValueCSD
+ 313              	.LVL32:
+  65:main.c        ****     getCapacitanceValueCSD(CapSense_BUTTON2_WDGT_ID, CapSense_BUTTON2_SNS0_ID);
+ 314              		.loc 1 65 0
+ 315 0012 0021     		movs	r1, #0
+ 316 0014 0220     		movs	r0, #2
+ 317 0016 FFF7FEFF 		bl	getCapacitanceValueCSD
+ 318              	.LVL33:
+  66:main.c        ****     getCapacitanceValueCSD(CapSense_BUTTON3_WDGT_ID, CapSense_BUTTON3_SNS0_ID);
+ 319              		.loc 1 66 0
+ 320 001a 0021     		movs	r1, #0
+ 321 001c 0320     		movs	r0, #3
+ 322 001e FFF7FEFF 		bl	getCapacitanceValueCSD
+ 323              	.LVL34:
+  67:main.c        ****     getCapacitanceValueCSD(CapSense_BUTTON4_WDGT_ID, CapSense_BUTTON4_SNS0_ID);
+ 324              		.loc 1 67 0
+ 325 0022 0021     		movs	r1, #0
+ 326 0024 0420     		movs	r0, #4
+ 327 0026 FFF7FEFF 		bl	getCapacitanceValueCSD
+ 328              	.LVL35:
+  68:main.c        ****     getCapacitanceValueCSD(CapSense_BUTTON5_WDGT_ID, CapSense_BUTTON5_SNS0_ID);
+ 329              		.loc 1 68 0
+ 330 002a 0021     		movs	r1, #0
+ 331 002c 0520     		movs	r0, #5
+ARM GAS  C:\Users\YUANFA~1\AppData\Local\Temp\ccFPSgYX.s 			page 8
+
+
+ 332 002e FFF7FEFF 		bl	getCapacitanceValueCSD
+ 333              	.LVL36:
+  69:main.c        ****     getCapacitanceValueCSD(CapSense_BUTTON6_WDGT_ID, CapSense_BUTTON6_SNS0_ID);
+ 334              		.loc 1 69 0
+ 335 0032 0021     		movs	r1, #0
+ 336 0034 0620     		movs	r0, #6
+ 337 0036 FFF7FEFF 		bl	getCapacitanceValueCSD
+ 338              	.LVL37:
+  70:main.c        ****     getCapacitanceValueCSD(CapSense_BUTTON7_WDGT_ID, CapSense_BUTTON7_SNS0_ID);
+ 339              		.loc 1 70 0
+ 340 003a 0021     		movs	r1, #0
+ 341 003c 0720     		movs	r0, #7
+ 342 003e FFF7FEFF 		bl	getCapacitanceValueCSD
+ 343              	.LVL38:
+  71:main.c        ****     getCapacitanceValueCSD(CapSense_BUTTON8_WDGT_ID, CapSense_BUTTON8_SNS0_ID);
+ 344              		.loc 1 71 0
+ 345 0042 0021     		movs	r1, #0
+ 346 0044 0820     		movs	r0, #8
+ 347 0046 FFF7FEFF 		bl	getCapacitanceValueCSD
+ 348              	.LVL39:
+  72:main.c        ****     getCapacitanceValueCSD(CapSense_BUTTON9_WDGT_ID, CapSense_BUTTON9_SNS0_ID);
+ 349              		.loc 1 72 0
+ 350 004a 0021     		movs	r1, #0
+ 351 004c 0920     		movs	r0, #9
+ 352 004e FFF7FEFF 		bl	getCapacitanceValueCSD
+ 353              	.LVL40:
+  73:main.c        ****     getCapacitanceValueCSD(CapSense_BUTTON10_WDGT_ID, CapSense_BUTTON10_SNS0_ID);
+ 354              		.loc 1 73 0
+ 355 0052 0021     		movs	r1, #0
+ 356 0054 0A20     		movs	r0, #10
+ 357 0056 FFF7FEFF 		bl	getCapacitanceValueCSD
+ 358              	.LVL41:
+  74:main.c        ****     getCapacitanceValueCSD(CapSense_BUTTON11_WDGT_ID, CapSense_BUTTON11_SNS0_ID);
+ 359              		.loc 1 74 0
+ 360 005a 0021     		movs	r1, #0
+ 361 005c 0B20     		movs	r0, #11
+ 362 005e FFF7FEFF 		bl	getCapacitanceValueCSD
+ 363              	.LVL42:
+  75:main.c        ****     getCapacitanceValueCSD(CapSense_BUTTON12_WDGT_ID, CapSense_BUTTON12_SNS0_ID);
+ 364              		.loc 1 75 0
+ 365 0062 0021     		movs	r1, #0
+ 366 0064 0C20     		movs	r0, #12
+ 367 0066 FFF7FEFF 		bl	getCapacitanceValueCSD
+ 368              	.LVL43:
+  76:main.c        ****     getCapacitanceValueCSD(CapSense_BUTTON13_WDGT_ID, CapSense_BUTTON13_SNS0_ID);
+ 369              		.loc 1 76 0
+ 370 006a 0021     		movs	r1, #0
+ 371 006c 0D20     		movs	r0, #13
+ 372 006e FFF7FEFF 		bl	getCapacitanceValueCSD
+ 373              	.LVL44:
+  77:main.c        ****     getCapacitanceValueCSD(CapSense_BUTTON14_WDGT_ID, CapSense_BUTTON14_SNS0_ID);
+ 374              		.loc 1 77 0
+ 375 0072 0021     		movs	r1, #0
+ 376 0074 0E20     		movs	r0, #14
+ 377 0076 FFF7FEFF 		bl	getCapacitanceValueCSD
+ 378              	.LVL45:
+  78:main.c        ****     getCapacitanceValueCSD(CapSense_BUTTON15_WDGT_ID, CapSense_BUTTON15_SNS0_ID);
+ARM GAS  C:\Users\YUANFA~1\AppData\Local\Temp\ccFPSgYX.s 			page 9
+
+
+ 379              		.loc 1 78 0
+ 380 007a 0021     		movs	r1, #0
+ 381 007c 0F20     		movs	r0, #15
+ 382 007e FFF7FEFF 		bl	getCapacitanceValueCSD
+ 383              	.LVL46:
+  79:main.c        ****     getCapacitanceValueCSD(CapSense_BUTTON16_WDGT_ID, CapSense_BUTTON16_SNS0_ID);
+ 384              		.loc 1 79 0
+ 385 0082 0021     		movs	r1, #0
+ 386 0084 1020     		movs	r0, #16
+ 387 0086 FFF7FEFF 		bl	getCapacitanceValueCSD
+ 388              	.LVL47:
+  80:main.c        ****     getCapacitanceValueCSD(CapSense_BUTTON17_WDGT_ID, CapSense_BUTTON17_SNS0_ID);
+ 389              		.loc 1 80 0
+ 390 008a 0021     		movs	r1, #0
+ 391 008c 1120     		movs	r0, #17
+ 392 008e FFF7FEFF 		bl	getCapacitanceValueCSD
+ 393              	.LVL48:
+  81:main.c        ****     getCapacitanceValueCSD(CapSense_BUTTON18_WDGT_ID, CapSense_BUTTON18_SNS0_ID);
+ 394              		.loc 1 81 0
+ 395 0092 0021     		movs	r1, #0
+ 396 0094 1220     		movs	r0, #18
+ 397 0096 FFF7FEFF 		bl	getCapacitanceValueCSD
+ 398              	.LVL49:
+  82:main.c        ****     UART_UartPutString("\r\n");
+ 399              		.loc 1 82 0
+ 400 009a 0248     		ldr	r0, .L25
+ 401 009c FFF7FEFF 		bl	UART_UartPutString
+ 402              	.LVL50:
+  83:main.c        **** }
+ 403              		.loc 1 83 0
+ 404              		@ sp needed
+ 405 00a0 10BD     		pop	{r4, pc}
+ 406              	.L26:
+ 407 00a2 C046     		.align	2
+ 408              	.L25:
+ 409 00a4 00000000 		.word	.LC0
+ 410              		.cfi_endproc
+ 411              	.LFE37:
+ 412              		.size	PrintAll, .-PrintAll
+ 413              		.section	.text.main,"ax",%progbits
+ 414              		.align	2
+ 415              		.global	main
+ 416              		.code	16
+ 417              		.thumb_func
+ 418              		.type	main, %function
+ 419              	main:
+ 420              	.LFB38:
+  84:main.c        **** 
+  85:main.c        **** int main(void)
+  86:main.c        **** {
+ 421              		.loc 1 86 0
+ 422              		.cfi_startproc
+ 423              		@ Volatile: function does not return.
+ 424              		@ args = 0, pretend = 0, frame = 0
+ 425              		@ frame_needed = 0, uses_anonymous_args = 0
+ 426 0000 10B5     		push	{r4, lr}
+ 427              		.cfi_def_cfa_offset 8
+ARM GAS  C:\Users\YUANFA~1\AppData\Local\Temp\ccFPSgYX.s 			page 10
+
+
+ 428              		.cfi_offset 4, -8
+ 429              		.cfi_offset 14, -4
+  87:main.c        ****     CyGlobalIntEnable;
+ 430              		.loc 1 87 0
+ 431              		.syntax divided
+ 432              	@ 87 "main.c" 1
+ 433 0002 62B6     		CPSIE   i
+ 434              	@ 0 "" 2
+  88:main.c        ****     
+  89:main.c        ****     UART_Start();
+ 435              		.loc 1 89 0
+ 436              		.thumb
+ 437              		.syntax unified
+ 438 0004 FFF7FEFF 		bl	UART_Start
+ 439              	.LVL51:
+  90:main.c        ****     print("Start!");
+ 440              		.loc 1 90 0
+ 441 0008 0748     		ldr	r0, .L29
+ 442 000a FFF7FEFF 		bl	print
+ 443              	.LVL52:
+  91:main.c        ****     
+  92:main.c        ****     CapSense_Start();
+ 444              		.loc 1 92 0
+ 445 000e FFF7FEFF 		bl	CapSense_Start
+ 446              	.LVL53:
+ 447              	.L28:
+  93:main.c        ****     
+  94:main.c        ****     for(;;)
+  95:main.c        ****     {
+  96:main.c        ****         CapSense_ProcessAllWidgets();
+ 448              		.loc 1 96 0 discriminator 1
+ 449 0012 FFF7FEFF 		bl	CapSense_ProcessAllWidgets
+ 450              	.LVL54:
+  97:main.c        ****         
+  98:main.c        ****         PrintAll();
+ 451              		.loc 1 98 0 discriminator 1
+ 452 0016 FFF7FEFF 		bl	PrintAll
+ 453              	.LVL55:
+  99:main.c        ****         CyDelay(100);
+ 454              		.loc 1 99 0 discriminator 1
+ 455 001a 6420     		movs	r0, #100
+ 456 001c FFF7FEFF 		bl	CyDelay
+ 457              	.LVL56:
+ 100:main.c        ****         
+ 101:main.c        ****         CapSense_ScanAllWidgets();
+ 458              		.loc 1 101 0 discriminator 1
+ 459 0020 FFF7FEFF 		bl	CapSense_ScanAllWidgets
+ 460              	.LVL57:
+ 461 0024 F5E7     		b	.L28
+ 462              	.L30:
+ 463 0026 C046     		.align	2
+ 464              	.L29:
+ 465 0028 54000000 		.word	.LC27
+ 466              		.cfi_endproc
+ 467              	.LFE38:
+ 468              		.size	main, .-main
+ 469              		.section	.rodata.str1.4,"aMS",%progbits,1
+ARM GAS  C:\Users\YUANFA~1\AppData\Local\Temp\ccFPSgYX.s 			page 11
+
+
+ 470              		.align	2
+ 471              	.LC0:
+ 472 0000 0D0A00   		.ascii	"\015\012\000"
+ 473 0003 00       		.space	1
+ 474              	.LC3:
+ 475 0004 53554343 		.ascii	"SUCCESS\000"
+ 475      45535300 
+ 476              	.LC5:
+ 477 000c 4241445F 		.ascii	"BAD_PARAM\000"
+ 477      50415241 
+ 477      4D00
+ 478 0016 0000     		.space	2
+ 479              	.LC7:
+ 480 0018 4C4F575F 		.ascii	"LOW_LIMIT\000"
+ 480      4C494D49 
+ 480      5400
+ 481 0022 0000     		.space	2
+ 482              	.LC9:
+ 483 0024 48494748 		.ascii	"HIGH_LIMIT\000"
+ 483      5F4C494D 
+ 483      495400
+ 484 002f 00       		.space	1
+ 485              	.LC11:
+ 486 0030 4552524F 		.ascii	"ERROR\000"
+ 486      5200
+ 487 0036 0000     		.space	2
+ 488              	.LC13:
+ 489 0038 77686174 		.ascii	"what?\000"
+ 489      3F00
+ 490 003e 0000     		.space	2
+ 491              	.LC15:
+ 492 0040 2000     		.ascii	" \000"
+ 493 0042 0000     		.space	2
+ 494              	.LC18:
+ 495 0044 53484F52 		.ascii	"SHORT\000"
+ 495      5400
+ 496 004a 0000     		.space	2
+ 497              	.LC20:
+ 498 004c 42414400 		.ascii	"BAD\000"
+ 499              	.LC23:
+ 500 0050 256C7500 		.ascii	"%lu\000"
+ 501              	.LC27:
+ 502 0054 53746172 		.ascii	"Start!\000"
+ 502      742100
+ 503              		.text
+ 504              	.Letext0:
+ 505              		.file 2 "Generated_Source\\PSoC4/cytypes.h"
+ 506              		.file 3 "Generated_Source\\PSoC4/CapSense_Structure.h"
+ 507              		.file 4 "Generated_Source\\PSoC4/UART_SPI_UART.h"
+ 508              		.file 5 "Generated_Source\\PSoC4/CapSense_SelfTest.h"
+ 509              		.file 6 "<built-in>"
+ 510              		.file 7 "Generated_Source\\PSoC4/UART.h"
+ 511              		.file 8 "Generated_Source\\PSoC4/CapSense_Control.h"
+ 512              		.file 9 "Generated_Source\\PSoC4/CyLib.h"
+ 513              		.file 10 "Generated_Source\\PSoC4/CapSense_Sensing.h"
+ 514              		.section	.debug_info,"",%progbits
+ 515              	.Ldebug_info0:
+ARM GAS  C:\Users\YUANFA~1\AppData\Local\Temp\ccFPSgYX.s 			page 12
+
+
+ 516 0000 AD060000 		.4byte	0x6ad
+ 517 0004 0400     		.2byte	0x4
+ 518 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 519 000a 04       		.byte	0x4
+ 520 000b 01       		.uleb128 0x1
+ 521 000c FA020000 		.4byte	.LASF40
+ 522 0010 0C       		.byte	0xc
+ 523 0011 78020000 		.4byte	.LASF41
+ 524 0015 EA000000 		.4byte	.LASF42
+ 525 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 526 001d 00000000 		.4byte	0
+ 527 0021 00000000 		.4byte	.Ldebug_line0
+ 528 0025 02       		.uleb128 0x2
+ 529 0026 01       		.byte	0x1
+ 530 0027 06       		.byte	0x6
+ 531 0028 8C030000 		.4byte	.LASF0
+ 532 002c 02       		.uleb128 0x2
+ 533 002d 01       		.byte	0x1
+ 534 002e 08       		.byte	0x8
+ 535 002f 61010000 		.4byte	.LASF1
+ 536 0033 02       		.uleb128 0x2
+ 537 0034 02       		.byte	0x2
+ 538 0035 05       		.byte	0x5
+ 539 0036 AC020000 		.4byte	.LASF2
+ 540 003a 02       		.uleb128 0x2
+ 541 003b 02       		.byte	0x2
+ 542 003c 07       		.byte	0x7
+ 543 003d 9E000000 		.4byte	.LASF3
+ 544 0041 02       		.uleb128 0x2
+ 545 0042 04       		.byte	0x4
+ 546 0043 05       		.byte	0x5
+ 547 0044 E5020000 		.4byte	.LASF4
+ 548 0048 02       		.uleb128 0x2
+ 549 0049 04       		.byte	0x4
+ 550 004a 07       		.byte	0x7
+ 551 004b 86010000 		.4byte	.LASF5
+ 552 004f 02       		.uleb128 0x2
+ 553 0050 08       		.byte	0x8
+ 554 0051 05       		.byte	0x5
+ 555 0052 6A020000 		.4byte	.LASF6
+ 556 0056 02       		.uleb128 0x2
+ 557 0057 08       		.byte	0x8
+ 558 0058 07       		.byte	0x7
+ 559 0059 09020000 		.4byte	.LASF7
+ 560 005d 03       		.uleb128 0x3
+ 561 005e 04       		.byte	0x4
+ 562 005f 05       		.byte	0x5
+ 563 0060 696E7400 		.ascii	"int\000"
+ 564 0064 02       		.uleb128 0x2
+ 565 0065 04       		.byte	0x4
+ 566 0066 07       		.byte	0x7
+ 567 0067 FC010000 		.4byte	.LASF8
+ 568 006b 04       		.uleb128 0x4
+ 569 006c F5010000 		.4byte	.LASF22
+ 570 0070 02       		.byte	0x2
+ 571 0071 FD01     		.2byte	0x1fd
+ 572 0073 48000000 		.4byte	0x48
+ARM GAS  C:\Users\YUANFA~1\AppData\Local\Temp\ccFPSgYX.s 			page 13
+
+
+ 573 0077 02       		.uleb128 0x2
+ 574 0078 04       		.byte	0x4
+ 575 0079 04       		.byte	0x4
+ 576 007a 43010000 		.4byte	.LASF9
+ 577 007e 02       		.uleb128 0x2
+ 578 007f 08       		.byte	0x8
+ 579 0080 04       		.byte	0x4
+ 580 0081 E3000000 		.4byte	.LASF10
+ 581 0085 02       		.uleb128 0x2
+ 582 0086 01       		.byte	0x1
+ 583 0087 08       		.byte	0x8
+ 584 0088 7F020000 		.4byte	.LASF11
+ 585 008c 02       		.uleb128 0x2
+ 586 008d 08       		.byte	0x8
+ 587 008e 04       		.byte	0x4
+ 588 008f EE020000 		.4byte	.LASF12
+ 589 0093 02       		.uleb128 0x2
+ 590 0094 04       		.byte	0x4
+ 591 0095 07       		.byte	0x7
+ 592 0096 4A020000 		.4byte	.LASF13
+ 593 009a 05       		.uleb128 0x5
+ 594 009b 04       		.byte	0x4
+ 595 009c 85000000 		.4byte	0x85
+ 596 00a0 05       		.uleb128 0x5
+ 597 00a1 04       		.byte	0x4
+ 598 00a2 A6000000 		.4byte	0xa6
+ 599 00a6 06       		.uleb128 0x6
+ 600 00a7 85000000 		.4byte	0x85
+ 601 00ab 07       		.uleb128 0x7
+ 602 00ac 01       		.byte	0x1
+ 603 00ad 2C000000 		.4byte	0x2c
+ 604 00b1 03       		.byte	0x3
+ 605 00b2 87       		.byte	0x87
+ 606 00b3 E8000000 		.4byte	0xe8
+ 607 00b7 08       		.uleb128 0x8
+ 608 00b8 A3010000 		.4byte	.LASF14
+ 609 00bc 00       		.byte	0
+ 610 00bd 08       		.uleb128 0x8
+ 611 00be B1000000 		.4byte	.LASF15
+ 612 00c2 01       		.byte	0x1
+ 613 00c3 08       		.uleb128 0x8
+ 614 00c4 8A020000 		.4byte	.LASF16
+ 615 00c8 02       		.byte	0x2
+ 616 00c9 08       		.uleb128 0x8
+ 617 00ca 5E000000 		.4byte	.LASF17
+ 618 00ce 03       		.byte	0x3
+ 619 00cf 08       		.uleb128 0x8
+ 620 00d0 C4010000 		.4byte	.LASF18
+ 621 00d4 04       		.byte	0x4
+ 622 00d5 08       		.uleb128 0x8
+ 623 00d6 C1020000 		.4byte	.LASF19
+ 624 00da 05       		.byte	0x5
+ 625 00db 08       		.uleb128 0x8
+ 626 00dc 17000000 		.4byte	.LASF20
+ 627 00e0 06       		.byte	0x6
+ 628 00e1 08       		.uleb128 0x8
+ 629 00e2 7D000000 		.4byte	.LASF21
+ARM GAS  C:\Users\YUANFA~1\AppData\Local\Temp\ccFPSgYX.s 			page 14
+
+
+ 630 00e6 07       		.byte	0x7
+ 631 00e7 00       		.byte	0
+ 632 00e8 09       		.uleb128 0x9
+ 633 00e9 39000000 		.4byte	.LASF23
+ 634 00ed 03       		.byte	0x3
+ 635 00ee 9E       		.byte	0x9e
+ 636 00ef AB000000 		.4byte	0xab
+ 637 00f3 0A       		.uleb128 0xa
+ 638 00f4 84020000 		.4byte	.LASF24
+ 639 00f8 01       		.byte	0x1
+ 640 00f9 0E       		.byte	0xe
+ 641 00fa 00000000 		.4byte	.LFB33
+ 642 00fe 14000000 		.4byte	.LFE33-.LFB33
+ 643 0102 01       		.uleb128 0x1
+ 644 0103 9C       		.byte	0x9c
+ 645 0104 40010000 		.4byte	0x140
+ 646 0108 0B       		.uleb128 0xb
+ 647 0109 6D736700 		.ascii	"msg\000"
+ 648 010d 01       		.byte	0x1
+ 649 010e 0E       		.byte	0xe
+ 650 010f 9A000000 		.4byte	0x9a
+ 651 0113 00000000 		.4byte	.LLST0
+ 652 0117 0C       		.uleb128 0xc
+ 653 0118 06000000 		.4byte	.LVL1
+ 654 011c 4C060000 		.4byte	0x64c
+ 655 0120 2C010000 		.4byte	0x12c
+ 656 0124 0D       		.uleb128 0xd
+ 657 0125 01       		.uleb128 0x1
+ 658 0126 50       		.byte	0x50
+ 659 0127 03       		.uleb128 0x3
+ 660 0128 F3       		.byte	0xf3
+ 661 0129 01       		.uleb128 0x1
+ 662 012a 50       		.byte	0x50
+ 663 012b 00       		.byte	0
+ 664 012c 0E       		.uleb128 0xe
+ 665 012d 0C000000 		.4byte	.LVL2
+ 666 0131 4C060000 		.4byte	0x64c
+ 667 0135 0D       		.uleb128 0xd
+ 668 0136 01       		.uleb128 0x1
+ 669 0137 50       		.byte	0x50
+ 670 0138 05       		.uleb128 0x5
+ 671 0139 03       		.byte	0x3
+ 672 013a 00000000 		.4byte	.LC0
+ 673 013e 00       		.byte	0
+ 674 013f 00       		.byte	0
+ 675 0140 0A       		.uleb128 0xa
+ 676 0141 06000000 		.4byte	.LASF25
+ 677 0145 01       		.byte	0x1
+ 678 0146 13       		.byte	0x13
+ 679 0147 00000000 		.4byte	.LFB34
+ 680 014b 5C000000 		.4byte	.LFE34-.LFB34
+ 681 014f 01       		.uleb128 0x1
+ 682 0150 9C       		.byte	0x9c
+ 683 0151 EB010000 		.4byte	0x1eb
+ 684 0155 0F       		.uleb128 0xf
+ 685 0156 00000000 		.4byte	.LASF26
+ 686 015a 01       		.byte	0x1
+ARM GAS  C:\Users\YUANFA~1\AppData\Local\Temp\ccFPSgYX.s 			page 15
+
+
+ 687 015b 13       		.byte	0x13
+ 688 015c E8000000 		.4byte	0xe8
+ 689 0160 21000000 		.4byte	.LLST1
+ 690 0164 0C       		.uleb128 0xc
+ 691 0165 14000000 		.4byte	.LVL5
+ 692 0169 F3000000 		.4byte	0xf3
+ 693 016d 7B010000 		.4byte	0x17b
+ 694 0171 0D       		.uleb128 0xd
+ 695 0172 01       		.uleb128 0x1
+ 696 0173 50       		.byte	0x50
+ 697 0174 05       		.uleb128 0x5
+ 698 0175 03       		.byte	0x3
+ 699 0176 04000000 		.4byte	.LC3
+ 700 017a 00       		.byte	0
+ 701 017b 0C       		.uleb128 0xc
+ 702 017c 1C000000 		.4byte	.LVL6
+ 703 0180 F3000000 		.4byte	0xf3
+ 704 0184 92010000 		.4byte	0x192
+ 705 0188 0D       		.uleb128 0xd
+ 706 0189 01       		.uleb128 0x1
+ 707 018a 50       		.byte	0x50
+ 708 018b 05       		.uleb128 0x5
+ 709 018c 03       		.byte	0x3
+ 710 018d 0C000000 		.4byte	.LC5
+ 711 0191 00       		.byte	0
+ 712 0192 0C       		.uleb128 0xc
+ 713 0193 24000000 		.4byte	.LVL7
+ 714 0197 F3000000 		.4byte	0xf3
+ 715 019b A9010000 		.4byte	0x1a9
+ 716 019f 0D       		.uleb128 0xd
+ 717 01a0 01       		.uleb128 0x1
+ 718 01a1 50       		.byte	0x50
+ 719 01a2 05       		.uleb128 0x5
+ 720 01a3 03       		.byte	0x3
+ 721 01a4 18000000 		.4byte	.LC7
+ 722 01a8 00       		.byte	0
+ 723 01a9 0C       		.uleb128 0xc
+ 724 01aa 2C000000 		.4byte	.LVL8
+ 725 01ae F3000000 		.4byte	0xf3
+ 726 01b2 C0010000 		.4byte	0x1c0
+ 727 01b6 0D       		.uleb128 0xd
+ 728 01b7 01       		.uleb128 0x1
+ 729 01b8 50       		.byte	0x50
+ 730 01b9 05       		.uleb128 0x5
+ 731 01ba 03       		.byte	0x3
+ 732 01bb 24000000 		.4byte	.LC9
+ 733 01bf 00       		.byte	0
+ 734 01c0 0C       		.uleb128 0xc
+ 735 01c1 34000000 		.4byte	.LVL9
+ 736 01c5 F3000000 		.4byte	0xf3
+ 737 01c9 D7010000 		.4byte	0x1d7
+ 738 01cd 0D       		.uleb128 0xd
+ 739 01ce 01       		.uleb128 0x1
+ 740 01cf 50       		.byte	0x50
+ 741 01d0 05       		.uleb128 0x5
+ 742 01d1 03       		.byte	0x3
+ 743 01d2 30000000 		.4byte	.LC11
+ARM GAS  C:\Users\YUANFA~1\AppData\Local\Temp\ccFPSgYX.s 			page 16
+
+
+ 744 01d6 00       		.byte	0
+ 745 01d7 0E       		.uleb128 0xe
+ 746 01d8 3C000000 		.4byte	.LVL10
+ 747 01dc F3000000 		.4byte	0xf3
+ 748 01e0 0D       		.uleb128 0xd
+ 749 01e1 01       		.uleb128 0x1
+ 750 01e2 50       		.byte	0x50
+ 751 01e3 05       		.uleb128 0x5
+ 752 01e4 03       		.byte	0x3
+ 753 01e5 38000000 		.4byte	.LC13
+ 754 01e9 00       		.byte	0
+ 755 01ea 00       		.byte	0
+ 756 01eb 0A       		.uleb128 0xa
+ 757 01ec 53020000 		.4byte	.LASF27
+ 758 01f0 01       		.byte	0x1
+ 759 01f1 29       		.byte	0x29
+ 760 01f2 00000000 		.4byte	.LFB35
+ 761 01f6 68000000 		.4byte	.LFE35-.LFB35
+ 762 01fa 01       		.uleb128 0x1
+ 763 01fb 9C       		.byte	0x9c
+ 764 01fc F9020000 		.4byte	0x2f9
+ 765 0200 0B       		.uleb128 0xb
+ 766 0201 77696400 		.ascii	"wid\000"
+ 767 0205 01       		.byte	0x1
+ 768 0206 29       		.byte	0x29
+ 769 0207 6B000000 		.4byte	0x6b
+ 770 020b 42000000 		.4byte	.LLST2
+ 771 020f 0B       		.uleb128 0xb
+ 772 0210 73696400 		.ascii	"sid\000"
+ 773 0214 01       		.byte	0x1
+ 774 0215 29       		.byte	0x29
+ 775 0216 6B000000 		.4byte	0x6b
+ 776 021a 6E000000 		.4byte	.LLST3
+ 777 021e 10       		.uleb128 0x10
+ 778 021f B6020000 		.4byte	.LASF28
+ 779 0223 01       		.byte	0x1
+ 780 0224 2A       		.byte	0x2a
+ 781 0225 E8000000 		.4byte	0xe8
+ 782 0229 02       		.uleb128 0x2
+ 783 022a 91       		.byte	0x91
+ 784 022b 6F       		.sleb128 -17
+ 785 022c 11       		.uleb128 0x11
+ 786 022d 76616C00 		.ascii	"val\000"
+ 787 0231 01       		.byte	0x1
+ 788 0232 2B       		.byte	0x2b
+ 789 0233 6B000000 		.4byte	0x6b
+ 790 0237 12       		.uleb128 0x12
+ 791 0238 20020000 		.4byte	.LASF29
+ 792 023c 01       		.byte	0x1
+ 793 023d 2C       		.byte	0x2c
+ 794 023e 6B000000 		.4byte	0x6b
+ 795 0242 9A000000 		.4byte	.LLST4
+ 796 0246 0C       		.uleb128 0xc
+ 797 0247 12000000 		.4byte	.LVL12
+ 798 024b 58060000 		.4byte	0x658
+ 799 024f 66020000 		.4byte	0x266
+ 800 0253 0D       		.uleb128 0xd
+ARM GAS  C:\Users\YUANFA~1\AppData\Local\Temp\ccFPSgYX.s 			page 17
+
+
+ 801 0254 01       		.uleb128 0x1
+ 802 0255 50       		.byte	0x50
+ 803 0256 02       		.uleb128 0x2
+ 804 0257 75       		.byte	0x75
+ 805 0258 00       		.sleb128 0
+ 806 0259 0D       		.uleb128 0xd
+ 807 025a 01       		.uleb128 0x1
+ 808 025b 51       		.byte	0x51
+ 809 025c 02       		.uleb128 0x2
+ 810 025d 76       		.byte	0x76
+ 811 025e 00       		.sleb128 0
+ 812 025f 0D       		.uleb128 0xd
+ 813 0260 01       		.uleb128 0x1
+ 814 0261 52       		.byte	0x52
+ 815 0262 02       		.uleb128 0x2
+ 816 0263 74       		.byte	0x74
+ 817 0264 00       		.sleb128 0
+ 818 0265 00       		.byte	0
+ 819 0266 0C       		.uleb128 0xc
+ 820 0267 1A000000 		.4byte	.LVL13
+ 821 026b 63060000 		.4byte	0x663
+ 822 026f 80020000 		.4byte	0x280
+ 823 0273 0D       		.uleb128 0xd
+ 824 0274 01       		.uleb128 0x1
+ 825 0275 50       		.byte	0x50
+ 826 0276 02       		.uleb128 0x2
+ 827 0277 75       		.byte	0x75
+ 828 0278 00       		.sleb128 0
+ 829 0279 0D       		.uleb128 0xd
+ 830 027a 01       		.uleb128 0x1
+ 831 027b 51       		.byte	0x51
+ 832 027c 02       		.uleb128 0x2
+ 833 027d 76       		.byte	0x76
+ 834 027e 00       		.sleb128 0
+ 835 027f 00       		.byte	0
+ 836 0280 13       		.uleb128 0x13
+ 837 0281 22000000 		.4byte	.LVL16
+ 838 0285 40010000 		.4byte	0x140
+ 839 0289 0C       		.uleb128 0xc
+ 840 028a 28000000 		.4byte	.LVL17
+ 841 028e 4C060000 		.4byte	0x64c
+ 842 0292 A0020000 		.4byte	0x2a0
+ 843 0296 0D       		.uleb128 0xd
+ 844 0297 01       		.uleb128 0x1
+ 845 0298 50       		.byte	0x50
+ 846 0299 05       		.uleb128 0x5
+ 847 029a 03       		.byte	0x3
+ 848 029b 40000000 		.4byte	.LC15
+ 849 029f 00       		.byte	0
+ 850 02a0 0C       		.uleb128 0xc
+ 851 02a1 32000000 		.4byte	.LVL18
+ 852 02a5 4C060000 		.4byte	0x64c
+ 853 02a9 B7020000 		.4byte	0x2b7
+ 854 02ad 0D       		.uleb128 0xd
+ 855 02ae 01       		.uleb128 0x1
+ 856 02af 50       		.byte	0x50
+ 857 02b0 05       		.uleb128 0x5
+ARM GAS  C:\Users\YUANFA~1\AppData\Local\Temp\ccFPSgYX.s 			page 18
+
+
+ 858 02b1 03       		.byte	0x3
+ 859 02b2 04000000 		.4byte	.LC3
+ 860 02b6 00       		.byte	0
+ 861 02b7 0C       		.uleb128 0xc
+ 862 02b8 42000000 		.4byte	.LVL19
+ 863 02bc 4C060000 		.4byte	0x64c
+ 864 02c0 CE020000 		.4byte	0x2ce
+ 865 02c4 0D       		.uleb128 0xd
+ 866 02c5 01       		.uleb128 0x1
+ 867 02c6 50       		.byte	0x50
+ 868 02c7 05       		.uleb128 0x5
+ 869 02c8 03       		.byte	0x3
+ 870 02c9 44000000 		.4byte	.LC18
+ 871 02cd 00       		.byte	0
+ 872 02ce 0C       		.uleb128 0xc
+ 873 02cf 4A000000 		.4byte	.LVL20
+ 874 02d3 4C060000 		.4byte	0x64c
+ 875 02d7 E5020000 		.4byte	0x2e5
+ 876 02db 0D       		.uleb128 0xd
+ 877 02dc 01       		.uleb128 0x1
+ 878 02dd 50       		.byte	0x50
+ 879 02de 05       		.uleb128 0x5
+ 880 02df 03       		.byte	0x3
+ 881 02e0 4C000000 		.4byte	.LC20
+ 882 02e4 00       		.byte	0
+ 883 02e5 0E       		.uleb128 0xe
+ 884 02e6 50000000 		.4byte	.LVL21
+ 885 02ea 4C060000 		.4byte	0x64c
+ 886 02ee 0D       		.uleb128 0xd
+ 887 02ef 01       		.uleb128 0x1
+ 888 02f0 50       		.byte	0x50
+ 889 02f1 05       		.uleb128 0x5
+ 890 02f2 03       		.byte	0x3
+ 891 02f3 00000000 		.4byte	.LC0
+ 892 02f7 00       		.byte	0
+ 893 02f8 00       		.byte	0
+ 894 02f9 0A       		.uleb128 0xa
+ 895 02fa 6F010000 		.4byte	.LASF30
+ 896 02fe 01       		.byte	0x1
+ 897 02ff 35       		.byte	0x35
+ 898 0300 00000000 		.4byte	.LFB36
+ 899 0304 30000000 		.4byte	.LFE36-.LFB36
+ 900 0308 01       		.uleb128 0x1
+ 901 0309 9C       		.byte	0x9c
+ 902 030a D9030000 		.4byte	0x3d9
+ 903 030e 0B       		.uleb128 0xb
+ 904 030f 77696400 		.ascii	"wid\000"
+ 905 0313 01       		.byte	0x1
+ 906 0314 35       		.byte	0x35
+ 907 0315 6B000000 		.4byte	0x6b
+ 908 0319 B8000000 		.4byte	.LLST5
+ 909 031d 0B       		.uleb128 0xb
+ 910 031e 73696400 		.ascii	"sid\000"
+ 911 0322 01       		.byte	0x1
+ 912 0323 35       		.byte	0x35
+ 913 0324 6B000000 		.4byte	0x6b
+ 914 0328 D9000000 		.4byte	.LLST6
+ARM GAS  C:\Users\YUANFA~1\AppData\Local\Temp\ccFPSgYX.s 			page 19
+
+
+ 915 032c 14       		.uleb128 0x14
+ 916 032d 72657300 		.ascii	"res\000"
+ 917 0331 01       		.byte	0x1
+ 918 0332 36       		.byte	0x36
+ 919 0333 D9030000 		.4byte	0x3d9
+ 920 0337 02       		.uleb128 0x2
+ 921 0338 91       		.byte	0x91
+ 922 0339 58       		.sleb128 -40
+ 923 033a 10       		.uleb128 0x10
+ 924 033b 00000000 		.4byte	.LASF26
+ 925 033f 01       		.byte	0x1
+ 926 0340 37       		.byte	0x37
+ 927 0341 E8000000 		.4byte	0xe8
+ 928 0345 02       		.uleb128 0x2
+ 929 0346 91       		.byte	0x91
+ 930 0347 57       		.sleb128 -41
+ 931 0348 15       		.uleb128 0x15
+ 932 0349 76616C00 		.ascii	"val\000"
+ 933 034d 01       		.byte	0x1
+ 934 034e 38       		.byte	0x38
+ 935 034f 6B000000 		.4byte	0x6b
+ 936 0353 FA000000 		.4byte	.LLST7
+ 937 0357 16       		.uleb128 0x16
+ 938 0358 B6030000 		.4byte	.LASF34
+ 939 035c 06       		.byte	0x6
+ 940 035d 00       		.byte	0
+ 941 035e 5D000000 		.4byte	0x5d
+ 942 0362 72030000 		.4byte	0x372
+ 943 0366 17       		.uleb128 0x17
+ 944 0367 9A000000 		.4byte	0x9a
+ 945 036b 17       		.uleb128 0x17
+ 946 036c A0000000 		.4byte	0xa0
+ 947 0370 18       		.uleb128 0x18
+ 948 0371 00       		.byte	0
+ 949 0372 0C       		.uleb128 0xc
+ 950 0373 0C000000 		.4byte	.LVL25
+ 951 0377 58060000 		.4byte	0x658
+ 952 037b 94030000 		.4byte	0x394
+ 953 037f 0D       		.uleb128 0xd
+ 954 0380 01       		.uleb128 0x1
+ 955 0381 50       		.byte	0x50
+ 956 0382 03       		.uleb128 0x3
+ 957 0383 F3       		.byte	0xf3
+ 958 0384 01       		.uleb128 0x1
+ 959 0385 50       		.byte	0x50
+ 960 0386 0D       		.uleb128 0xd
+ 961 0387 01       		.uleb128 0x1
+ 962 0388 51       		.byte	0x51
+ 963 0389 03       		.uleb128 0x3
+ 964 038a F3       		.byte	0xf3
+ 965 038b 01       		.uleb128 0x1
+ 966 038c 51       		.byte	0x51
+ 967 038d 0D       		.uleb128 0xd
+ 968 038e 01       		.uleb128 0x1
+ 969 038f 52       		.byte	0x52
+ 970 0390 02       		.uleb128 0x2
+ 971 0391 7D       		.byte	0x7d
+ARM GAS  C:\Users\YUANFA~1\AppData\Local\Temp\ccFPSgYX.s 			page 20
+
+
+ 972 0392 07       		.sleb128 7
+ 973 0393 00       		.byte	0
+ 974 0394 0C       		.uleb128 0xc
+ 975 0395 16000000 		.4byte	.LVL28
+ 976 0399 6E060000 		.4byte	0x66e
+ 977 039d B1030000 		.4byte	0x3b1
+ 978 03a1 0D       		.uleb128 0xd
+ 979 03a2 01       		.uleb128 0x1
+ 980 03a3 50       		.byte	0x50
+ 981 03a4 02       		.uleb128 0x2
+ 982 03a5 91       		.byte	0x91
+ 983 03a6 58       		.sleb128 -40
+ 984 03a7 0D       		.uleb128 0xd
+ 985 03a8 01       		.uleb128 0x1
+ 986 03a9 51       		.byte	0x51
+ 987 03aa 05       		.uleb128 0x5
+ 988 03ab 03       		.byte	0x3
+ 989 03ac 50000000 		.4byte	.LC23
+ 990 03b0 00       		.byte	0
+ 991 03b1 0C       		.uleb128 0xc
+ 992 03b2 1C000000 		.4byte	.LVL29
+ 993 03b6 4C060000 		.4byte	0x64c
+ 994 03ba C5030000 		.4byte	0x3c5
+ 995 03be 0D       		.uleb128 0xd
+ 996 03bf 01       		.uleb128 0x1
+ 997 03c0 50       		.byte	0x50
+ 998 03c1 02       		.uleb128 0x2
+ 999 03c2 91       		.byte	0x91
+ 1000 03c3 58       		.sleb128 -40
+ 1001 03c4 00       		.byte	0
+ 1002 03c5 0E       		.uleb128 0xe
+ 1003 03c6 22000000 		.4byte	.LVL30
+ 1004 03ca 4C060000 		.4byte	0x64c
+ 1005 03ce 0D       		.uleb128 0xd
+ 1006 03cf 01       		.uleb128 0x1
+ 1007 03d0 50       		.byte	0x50
+ 1008 03d1 05       		.uleb128 0x5
+ 1009 03d2 03       		.byte	0x3
+ 1010 03d3 40000000 		.4byte	.LC15
+ 1011 03d7 00       		.byte	0
+ 1012 03d8 00       		.byte	0
+ 1013 03d9 19       		.uleb128 0x19
+ 1014 03da 85000000 		.4byte	0x85
+ 1015 03de E9030000 		.4byte	0x3e9
+ 1016 03e2 1A       		.uleb128 0x1a
+ 1017 03e3 93000000 		.4byte	0x93
+ 1018 03e7 1D       		.byte	0x1d
+ 1019 03e8 00       		.byte	0
+ 1020 03e9 1B       		.uleb128 0x1b
+ 1021 03ea E7010000 		.4byte	.LASF43
+ 1022 03ee 01       		.byte	0x1
+ 1023 03ef 3E       		.byte	0x3e
+ 1024 03f0 00000000 		.4byte	.LFB37
+ 1025 03f4 A8000000 		.4byte	.LFE37-.LFB37
+ 1026 03f8 01       		.uleb128 0x1
+ 1027 03f9 9C       		.byte	0x9c
+ 1028 03fa DA050000 		.4byte	0x5da
+ARM GAS  C:\Users\YUANFA~1\AppData\Local\Temp\ccFPSgYX.s 			page 21
+
+
+ 1029 03fe 0C       		.uleb128 0xc
+ 1030 03ff 0A000000 		.4byte	.LVL31
+ 1031 0403 F9020000 		.4byte	0x2f9
+ 1032 0407 16040000 		.4byte	0x416
+ 1033 040b 0D       		.uleb128 0xd
+ 1034 040c 01       		.uleb128 0x1
+ 1035 040d 50       		.byte	0x50
+ 1036 040e 01       		.uleb128 0x1
+ 1037 040f 30       		.byte	0x30
+ 1038 0410 0D       		.uleb128 0xd
+ 1039 0411 01       		.uleb128 0x1
+ 1040 0412 51       		.byte	0x51
+ 1041 0413 01       		.uleb128 0x1
+ 1042 0414 30       		.byte	0x30
+ 1043 0415 00       		.byte	0
+ 1044 0416 0C       		.uleb128 0xc
+ 1045 0417 12000000 		.4byte	.LVL32
+ 1046 041b F9020000 		.4byte	0x2f9
+ 1047 041f 2E040000 		.4byte	0x42e
+ 1048 0423 0D       		.uleb128 0xd
+ 1049 0424 01       		.uleb128 0x1
+ 1050 0425 50       		.byte	0x50
+ 1051 0426 01       		.uleb128 0x1
+ 1052 0427 31       		.byte	0x31
+ 1053 0428 0D       		.uleb128 0xd
+ 1054 0429 01       		.uleb128 0x1
+ 1055 042a 51       		.byte	0x51
+ 1056 042b 01       		.uleb128 0x1
+ 1057 042c 30       		.byte	0x30
+ 1058 042d 00       		.byte	0
+ 1059 042e 0C       		.uleb128 0xc
+ 1060 042f 1A000000 		.4byte	.LVL33
+ 1061 0433 F9020000 		.4byte	0x2f9
+ 1062 0437 46040000 		.4byte	0x446
+ 1063 043b 0D       		.uleb128 0xd
+ 1064 043c 01       		.uleb128 0x1
+ 1065 043d 50       		.byte	0x50
+ 1066 043e 01       		.uleb128 0x1
+ 1067 043f 32       		.byte	0x32
+ 1068 0440 0D       		.uleb128 0xd
+ 1069 0441 01       		.uleb128 0x1
+ 1070 0442 51       		.byte	0x51
+ 1071 0443 01       		.uleb128 0x1
+ 1072 0444 30       		.byte	0x30
+ 1073 0445 00       		.byte	0
+ 1074 0446 0C       		.uleb128 0xc
+ 1075 0447 22000000 		.4byte	.LVL34
+ 1076 044b F9020000 		.4byte	0x2f9
+ 1077 044f 5E040000 		.4byte	0x45e
+ 1078 0453 0D       		.uleb128 0xd
+ 1079 0454 01       		.uleb128 0x1
+ 1080 0455 50       		.byte	0x50
+ 1081 0456 01       		.uleb128 0x1
+ 1082 0457 33       		.byte	0x33
+ 1083 0458 0D       		.uleb128 0xd
+ 1084 0459 01       		.uleb128 0x1
+ 1085 045a 51       		.byte	0x51
+ARM GAS  C:\Users\YUANFA~1\AppData\Local\Temp\ccFPSgYX.s 			page 22
+
+
+ 1086 045b 01       		.uleb128 0x1
+ 1087 045c 30       		.byte	0x30
+ 1088 045d 00       		.byte	0
+ 1089 045e 0C       		.uleb128 0xc
+ 1090 045f 2A000000 		.4byte	.LVL35
+ 1091 0463 F9020000 		.4byte	0x2f9
+ 1092 0467 76040000 		.4byte	0x476
+ 1093 046b 0D       		.uleb128 0xd
+ 1094 046c 01       		.uleb128 0x1
+ 1095 046d 50       		.byte	0x50
+ 1096 046e 01       		.uleb128 0x1
+ 1097 046f 34       		.byte	0x34
+ 1098 0470 0D       		.uleb128 0xd
+ 1099 0471 01       		.uleb128 0x1
+ 1100 0472 51       		.byte	0x51
+ 1101 0473 01       		.uleb128 0x1
+ 1102 0474 30       		.byte	0x30
+ 1103 0475 00       		.byte	0
+ 1104 0476 0C       		.uleb128 0xc
+ 1105 0477 32000000 		.4byte	.LVL36
+ 1106 047b F9020000 		.4byte	0x2f9
+ 1107 047f 8E040000 		.4byte	0x48e
+ 1108 0483 0D       		.uleb128 0xd
+ 1109 0484 01       		.uleb128 0x1
+ 1110 0485 50       		.byte	0x50
+ 1111 0486 01       		.uleb128 0x1
+ 1112 0487 35       		.byte	0x35
+ 1113 0488 0D       		.uleb128 0xd
+ 1114 0489 01       		.uleb128 0x1
+ 1115 048a 51       		.byte	0x51
+ 1116 048b 01       		.uleb128 0x1
+ 1117 048c 30       		.byte	0x30
+ 1118 048d 00       		.byte	0
+ 1119 048e 0C       		.uleb128 0xc
+ 1120 048f 3A000000 		.4byte	.LVL37
+ 1121 0493 F9020000 		.4byte	0x2f9
+ 1122 0497 A6040000 		.4byte	0x4a6
+ 1123 049b 0D       		.uleb128 0xd
+ 1124 049c 01       		.uleb128 0x1
+ 1125 049d 50       		.byte	0x50
+ 1126 049e 01       		.uleb128 0x1
+ 1127 049f 36       		.byte	0x36
+ 1128 04a0 0D       		.uleb128 0xd
+ 1129 04a1 01       		.uleb128 0x1
+ 1130 04a2 51       		.byte	0x51
+ 1131 04a3 01       		.uleb128 0x1
+ 1132 04a4 30       		.byte	0x30
+ 1133 04a5 00       		.byte	0
+ 1134 04a6 0C       		.uleb128 0xc
+ 1135 04a7 42000000 		.4byte	.LVL38
+ 1136 04ab F9020000 		.4byte	0x2f9
+ 1137 04af BE040000 		.4byte	0x4be
+ 1138 04b3 0D       		.uleb128 0xd
+ 1139 04b4 01       		.uleb128 0x1
+ 1140 04b5 50       		.byte	0x50
+ 1141 04b6 01       		.uleb128 0x1
+ 1142 04b7 37       		.byte	0x37
+ARM GAS  C:\Users\YUANFA~1\AppData\Local\Temp\ccFPSgYX.s 			page 23
+
+
+ 1143 04b8 0D       		.uleb128 0xd
+ 1144 04b9 01       		.uleb128 0x1
+ 1145 04ba 51       		.byte	0x51
+ 1146 04bb 01       		.uleb128 0x1
+ 1147 04bc 30       		.byte	0x30
+ 1148 04bd 00       		.byte	0
+ 1149 04be 0C       		.uleb128 0xc
+ 1150 04bf 4A000000 		.4byte	.LVL39
+ 1151 04c3 F9020000 		.4byte	0x2f9
+ 1152 04c7 D6040000 		.4byte	0x4d6
+ 1153 04cb 0D       		.uleb128 0xd
+ 1154 04cc 01       		.uleb128 0x1
+ 1155 04cd 50       		.byte	0x50
+ 1156 04ce 01       		.uleb128 0x1
+ 1157 04cf 38       		.byte	0x38
+ 1158 04d0 0D       		.uleb128 0xd
+ 1159 04d1 01       		.uleb128 0x1
+ 1160 04d2 51       		.byte	0x51
+ 1161 04d3 01       		.uleb128 0x1
+ 1162 04d4 30       		.byte	0x30
+ 1163 04d5 00       		.byte	0
+ 1164 04d6 0C       		.uleb128 0xc
+ 1165 04d7 52000000 		.4byte	.LVL40
+ 1166 04db F9020000 		.4byte	0x2f9
+ 1167 04df EE040000 		.4byte	0x4ee
+ 1168 04e3 0D       		.uleb128 0xd
+ 1169 04e4 01       		.uleb128 0x1
+ 1170 04e5 50       		.byte	0x50
+ 1171 04e6 01       		.uleb128 0x1
+ 1172 04e7 39       		.byte	0x39
+ 1173 04e8 0D       		.uleb128 0xd
+ 1174 04e9 01       		.uleb128 0x1
+ 1175 04ea 51       		.byte	0x51
+ 1176 04eb 01       		.uleb128 0x1
+ 1177 04ec 30       		.byte	0x30
+ 1178 04ed 00       		.byte	0
+ 1179 04ee 0C       		.uleb128 0xc
+ 1180 04ef 5A000000 		.4byte	.LVL41
+ 1181 04f3 F9020000 		.4byte	0x2f9
+ 1182 04f7 06050000 		.4byte	0x506
+ 1183 04fb 0D       		.uleb128 0xd
+ 1184 04fc 01       		.uleb128 0x1
+ 1185 04fd 50       		.byte	0x50
+ 1186 04fe 01       		.uleb128 0x1
+ 1187 04ff 3A       		.byte	0x3a
+ 1188 0500 0D       		.uleb128 0xd
+ 1189 0501 01       		.uleb128 0x1
+ 1190 0502 51       		.byte	0x51
+ 1191 0503 01       		.uleb128 0x1
+ 1192 0504 30       		.byte	0x30
+ 1193 0505 00       		.byte	0
+ 1194 0506 0C       		.uleb128 0xc
+ 1195 0507 62000000 		.4byte	.LVL42
+ 1196 050b F9020000 		.4byte	0x2f9
+ 1197 050f 1E050000 		.4byte	0x51e
+ 1198 0513 0D       		.uleb128 0xd
+ 1199 0514 01       		.uleb128 0x1
+ARM GAS  C:\Users\YUANFA~1\AppData\Local\Temp\ccFPSgYX.s 			page 24
+
+
+ 1200 0515 50       		.byte	0x50
+ 1201 0516 01       		.uleb128 0x1
+ 1202 0517 3B       		.byte	0x3b
+ 1203 0518 0D       		.uleb128 0xd
+ 1204 0519 01       		.uleb128 0x1
+ 1205 051a 51       		.byte	0x51
+ 1206 051b 01       		.uleb128 0x1
+ 1207 051c 30       		.byte	0x30
+ 1208 051d 00       		.byte	0
+ 1209 051e 0C       		.uleb128 0xc
+ 1210 051f 6A000000 		.4byte	.LVL43
+ 1211 0523 F9020000 		.4byte	0x2f9
+ 1212 0527 36050000 		.4byte	0x536
+ 1213 052b 0D       		.uleb128 0xd
+ 1214 052c 01       		.uleb128 0x1
+ 1215 052d 50       		.byte	0x50
+ 1216 052e 01       		.uleb128 0x1
+ 1217 052f 3C       		.byte	0x3c
+ 1218 0530 0D       		.uleb128 0xd
+ 1219 0531 01       		.uleb128 0x1
+ 1220 0532 51       		.byte	0x51
+ 1221 0533 01       		.uleb128 0x1
+ 1222 0534 30       		.byte	0x30
+ 1223 0535 00       		.byte	0
+ 1224 0536 0C       		.uleb128 0xc
+ 1225 0537 72000000 		.4byte	.LVL44
+ 1226 053b F9020000 		.4byte	0x2f9
+ 1227 053f 4E050000 		.4byte	0x54e
+ 1228 0543 0D       		.uleb128 0xd
+ 1229 0544 01       		.uleb128 0x1
+ 1230 0545 50       		.byte	0x50
+ 1231 0546 01       		.uleb128 0x1
+ 1232 0547 3D       		.byte	0x3d
+ 1233 0548 0D       		.uleb128 0xd
+ 1234 0549 01       		.uleb128 0x1
+ 1235 054a 51       		.byte	0x51
+ 1236 054b 01       		.uleb128 0x1
+ 1237 054c 30       		.byte	0x30
+ 1238 054d 00       		.byte	0
+ 1239 054e 0C       		.uleb128 0xc
+ 1240 054f 7A000000 		.4byte	.LVL45
+ 1241 0553 F9020000 		.4byte	0x2f9
+ 1242 0557 66050000 		.4byte	0x566
+ 1243 055b 0D       		.uleb128 0xd
+ 1244 055c 01       		.uleb128 0x1
+ 1245 055d 50       		.byte	0x50
+ 1246 055e 01       		.uleb128 0x1
+ 1247 055f 3E       		.byte	0x3e
+ 1248 0560 0D       		.uleb128 0xd
+ 1249 0561 01       		.uleb128 0x1
+ 1250 0562 51       		.byte	0x51
+ 1251 0563 01       		.uleb128 0x1
+ 1252 0564 30       		.byte	0x30
+ 1253 0565 00       		.byte	0
+ 1254 0566 0C       		.uleb128 0xc
+ 1255 0567 82000000 		.4byte	.LVL46
+ 1256 056b F9020000 		.4byte	0x2f9
+ARM GAS  C:\Users\YUANFA~1\AppData\Local\Temp\ccFPSgYX.s 			page 25
+
+
+ 1257 056f 7E050000 		.4byte	0x57e
+ 1258 0573 0D       		.uleb128 0xd
+ 1259 0574 01       		.uleb128 0x1
+ 1260 0575 50       		.byte	0x50
+ 1261 0576 01       		.uleb128 0x1
+ 1262 0577 3F       		.byte	0x3f
+ 1263 0578 0D       		.uleb128 0xd
+ 1264 0579 01       		.uleb128 0x1
+ 1265 057a 51       		.byte	0x51
+ 1266 057b 01       		.uleb128 0x1
+ 1267 057c 30       		.byte	0x30
+ 1268 057d 00       		.byte	0
+ 1269 057e 0C       		.uleb128 0xc
+ 1270 057f 8A000000 		.4byte	.LVL47
+ 1271 0583 F9020000 		.4byte	0x2f9
+ 1272 0587 96050000 		.4byte	0x596
+ 1273 058b 0D       		.uleb128 0xd
+ 1274 058c 01       		.uleb128 0x1
+ 1275 058d 50       		.byte	0x50
+ 1276 058e 01       		.uleb128 0x1
+ 1277 058f 40       		.byte	0x40
+ 1278 0590 0D       		.uleb128 0xd
+ 1279 0591 01       		.uleb128 0x1
+ 1280 0592 51       		.byte	0x51
+ 1281 0593 01       		.uleb128 0x1
+ 1282 0594 30       		.byte	0x30
+ 1283 0595 00       		.byte	0
+ 1284 0596 0C       		.uleb128 0xc
+ 1285 0597 92000000 		.4byte	.LVL48
+ 1286 059b F9020000 		.4byte	0x2f9
+ 1287 059f AE050000 		.4byte	0x5ae
+ 1288 05a3 0D       		.uleb128 0xd
+ 1289 05a4 01       		.uleb128 0x1
+ 1290 05a5 50       		.byte	0x50
+ 1291 05a6 01       		.uleb128 0x1
+ 1292 05a7 41       		.byte	0x41
+ 1293 05a8 0D       		.uleb128 0xd
+ 1294 05a9 01       		.uleb128 0x1
+ 1295 05aa 51       		.byte	0x51
+ 1296 05ab 01       		.uleb128 0x1
+ 1297 05ac 30       		.byte	0x30
+ 1298 05ad 00       		.byte	0
+ 1299 05ae 0C       		.uleb128 0xc
+ 1300 05af 9A000000 		.4byte	.LVL49
+ 1301 05b3 F9020000 		.4byte	0x2f9
+ 1302 05b7 C6050000 		.4byte	0x5c6
+ 1303 05bb 0D       		.uleb128 0xd
+ 1304 05bc 01       		.uleb128 0x1
+ 1305 05bd 50       		.byte	0x50
+ 1306 05be 01       		.uleb128 0x1
+ 1307 05bf 42       		.byte	0x42
+ 1308 05c0 0D       		.uleb128 0xd
+ 1309 05c1 01       		.uleb128 0x1
+ 1310 05c2 51       		.byte	0x51
+ 1311 05c3 01       		.uleb128 0x1
+ 1312 05c4 30       		.byte	0x30
+ 1313 05c5 00       		.byte	0
+ARM GAS  C:\Users\YUANFA~1\AppData\Local\Temp\ccFPSgYX.s 			page 26
+
+
+ 1314 05c6 0E       		.uleb128 0xe
+ 1315 05c7 A0000000 		.4byte	.LVL50
+ 1316 05cb 4C060000 		.4byte	0x64c
+ 1317 05cf 0D       		.uleb128 0xd
+ 1318 05d0 01       		.uleb128 0x1
+ 1319 05d1 50       		.byte	0x50
+ 1320 05d2 05       		.uleb128 0x5
+ 1321 05d3 03       		.byte	0x3
+ 1322 05d4 00000000 		.4byte	.LC0
+ 1323 05d8 00       		.byte	0
+ 1324 05d9 00       		.byte	0
+ 1325 05da 1C       		.uleb128 0x1c
+ 1326 05db F0010000 		.4byte	.LASF44
+ 1327 05df 01       		.byte	0x1
+ 1328 05e0 55       		.byte	0x55
+ 1329 05e1 5D000000 		.4byte	0x5d
+ 1330 05e5 00000000 		.4byte	.LFB38
+ 1331 05e9 2C000000 		.4byte	.LFE38-.LFB38
+ 1332 05ed 01       		.uleb128 0x1
+ 1333 05ee 9C       		.byte	0x9c
+ 1334 05ef 4C060000 		.4byte	0x64c
+ 1335 05f3 13       		.uleb128 0x13
+ 1336 05f4 08000000 		.4byte	.LVL51
+ 1337 05f8 79060000 		.4byte	0x679
+ 1338 05fc 0C       		.uleb128 0xc
+ 1339 05fd 0E000000 		.4byte	.LVL52
+ 1340 0601 F3000000 		.4byte	0xf3
+ 1341 0605 13060000 		.4byte	0x613
+ 1342 0609 0D       		.uleb128 0xd
+ 1343 060a 01       		.uleb128 0x1
+ 1344 060b 50       		.byte	0x50
+ 1345 060c 05       		.uleb128 0x5
+ 1346 060d 03       		.byte	0x3
+ 1347 060e 54000000 		.4byte	.LC27
+ 1348 0612 00       		.byte	0
+ 1349 0613 13       		.uleb128 0x13
+ 1350 0614 12000000 		.4byte	.LVL53
+ 1351 0618 84060000 		.4byte	0x684
+ 1352 061c 13       		.uleb128 0x13
+ 1353 061d 16000000 		.4byte	.LVL54
+ 1354 0621 8F060000 		.4byte	0x68f
+ 1355 0625 13       		.uleb128 0x13
+ 1356 0626 1A000000 		.4byte	.LVL55
+ 1357 062a E9030000 		.4byte	0x3e9
+ 1358 062e 0C       		.uleb128 0xc
+ 1359 062f 20000000 		.4byte	.LVL56
+ 1360 0633 9A060000 		.4byte	0x69a
+ 1361 0637 42060000 		.4byte	0x642
+ 1362 063b 0D       		.uleb128 0xd
+ 1363 063c 01       		.uleb128 0x1
+ 1364 063d 50       		.byte	0x50
+ 1365 063e 02       		.uleb128 0x2
+ 1366 063f 08       		.byte	0x8
+ 1367 0640 64       		.byte	0x64
+ 1368 0641 00       		.byte	0
+ 1369 0642 13       		.uleb128 0x13
+ 1370 0643 24000000 		.4byte	.LVL57
+ARM GAS  C:\Users\YUANFA~1\AppData\Local\Temp\ccFPSgYX.s 			page 27
+
+
+ 1371 0647 A5060000 		.4byte	0x6a5
+ 1372 064b 00       		.byte	0
+ 1373 064c 1D       		.uleb128 0x1d
+ 1374 064d 30010000 		.4byte	.LASF31
+ 1375 0651 30010000 		.4byte	.LASF31
+ 1376 0655 04       		.byte	0x4
+ 1377 0656 2A03     		.2byte	0x32a
+ 1378 0658 1E       		.uleb128 0x1e
+ 1379 0659 98030000 		.4byte	.LASF32
+ 1380 065d 98030000 		.4byte	.LASF32
+ 1381 0661 05       		.byte	0x5
+ 1382 0662 64       		.byte	0x64
+ 1383 0663 1E       		.uleb128 0x1e
+ 1384 0664 C6030000 		.4byte	.LASF33
+ 1385 0668 C6030000 		.4byte	.LASF33
+ 1386 066c 05       		.byte	0x5
+ 1387 066d 5F       		.byte	0x5f
+ 1388 066e 1E       		.uleb128 0x1e
+ 1389 066f B6030000 		.4byte	.LASF34
+ 1390 0673 B6030000 		.4byte	.LASF34
+ 1391 0677 06       		.byte	0x6
+ 1392 0678 00       		.byte	0
+ 1393 0679 1E       		.uleb128 0x1e
+ 1394 067a 98010000 		.4byte	.LASF35
+ 1395 067e 98010000 		.4byte	.LASF35
+ 1396 0682 07       		.byte	0x7
+ 1397 0683 72       		.byte	0x72
+ 1398 0684 1E       		.uleb128 0x1e
+ 1399 0685 D4000000 		.4byte	.LASF36
+ 1400 0689 D4000000 		.4byte	.LASF36
+ 1401 068d 08       		.byte	0x8
+ 1402 068e 3B       		.byte	0x3b
+ 1403 068f 1E       		.uleb128 0x1e
+ 1404 0690 2F020000 		.4byte	.LASF37
+ 1405 0694 2F020000 		.4byte	.LASF37
+ 1406 0698 08       		.byte	0x8
+ 1407 0699 3F       		.byte	0x3f
+ 1408 069a 1E       		.uleb128 0x1e
+ 1409 069b BE030000 		.4byte	.LASF38
+ 1410 069f BE030000 		.4byte	.LASF38
+ 1411 06a3 09       		.byte	0x9
+ 1412 06a4 EC       		.byte	0xec
+ 1413 06a5 1E       		.uleb128 0x1e
+ 1414 06a6 49010000 		.4byte	.LASF39
+ 1415 06aa 49010000 		.4byte	.LASF39
+ 1416 06ae 0A       		.byte	0xa
+ 1417 06af 59       		.byte	0x59
+ 1418 06b0 00       		.byte	0
+ 1419              		.section	.debug_abbrev,"",%progbits
+ 1420              	.Ldebug_abbrev0:
+ 1421 0000 01       		.uleb128 0x1
+ 1422 0001 11       		.uleb128 0x11
+ 1423 0002 01       		.byte	0x1
+ 1424 0003 25       		.uleb128 0x25
+ 1425 0004 0E       		.uleb128 0xe
+ 1426 0005 13       		.uleb128 0x13
+ 1427 0006 0B       		.uleb128 0xb
+ARM GAS  C:\Users\YUANFA~1\AppData\Local\Temp\ccFPSgYX.s 			page 28
+
+
+ 1428 0007 03       		.uleb128 0x3
+ 1429 0008 0E       		.uleb128 0xe
+ 1430 0009 1B       		.uleb128 0x1b
+ 1431 000a 0E       		.uleb128 0xe
+ 1432 000b 55       		.uleb128 0x55
+ 1433 000c 17       		.uleb128 0x17
+ 1434 000d 11       		.uleb128 0x11
+ 1435 000e 01       		.uleb128 0x1
+ 1436 000f 10       		.uleb128 0x10
+ 1437 0010 17       		.uleb128 0x17
+ 1438 0011 00       		.byte	0
+ 1439 0012 00       		.byte	0
+ 1440 0013 02       		.uleb128 0x2
+ 1441 0014 24       		.uleb128 0x24
+ 1442 0015 00       		.byte	0
+ 1443 0016 0B       		.uleb128 0xb
+ 1444 0017 0B       		.uleb128 0xb
+ 1445 0018 3E       		.uleb128 0x3e
+ 1446 0019 0B       		.uleb128 0xb
+ 1447 001a 03       		.uleb128 0x3
+ 1448 001b 0E       		.uleb128 0xe
+ 1449 001c 00       		.byte	0
+ 1450 001d 00       		.byte	0
+ 1451 001e 03       		.uleb128 0x3
+ 1452 001f 24       		.uleb128 0x24
+ 1453 0020 00       		.byte	0
+ 1454 0021 0B       		.uleb128 0xb
+ 1455 0022 0B       		.uleb128 0xb
+ 1456 0023 3E       		.uleb128 0x3e
+ 1457 0024 0B       		.uleb128 0xb
+ 1458 0025 03       		.uleb128 0x3
+ 1459 0026 08       		.uleb128 0x8
+ 1460 0027 00       		.byte	0
+ 1461 0028 00       		.byte	0
+ 1462 0029 04       		.uleb128 0x4
+ 1463 002a 16       		.uleb128 0x16
+ 1464 002b 00       		.byte	0
+ 1465 002c 03       		.uleb128 0x3
+ 1466 002d 0E       		.uleb128 0xe
+ 1467 002e 3A       		.uleb128 0x3a
+ 1468 002f 0B       		.uleb128 0xb
+ 1469 0030 3B       		.uleb128 0x3b
+ 1470 0031 05       		.uleb128 0x5
+ 1471 0032 49       		.uleb128 0x49
+ 1472 0033 13       		.uleb128 0x13
+ 1473 0034 00       		.byte	0
+ 1474 0035 00       		.byte	0
+ 1475 0036 05       		.uleb128 0x5
+ 1476 0037 0F       		.uleb128 0xf
+ 1477 0038 00       		.byte	0
+ 1478 0039 0B       		.uleb128 0xb
+ 1479 003a 0B       		.uleb128 0xb
+ 1480 003b 49       		.uleb128 0x49
+ 1481 003c 13       		.uleb128 0x13
+ 1482 003d 00       		.byte	0
+ 1483 003e 00       		.byte	0
+ 1484 003f 06       		.uleb128 0x6
+ARM GAS  C:\Users\YUANFA~1\AppData\Local\Temp\ccFPSgYX.s 			page 29
+
+
+ 1485 0040 26       		.uleb128 0x26
+ 1486 0041 00       		.byte	0
+ 1487 0042 49       		.uleb128 0x49
+ 1488 0043 13       		.uleb128 0x13
+ 1489 0044 00       		.byte	0
+ 1490 0045 00       		.byte	0
+ 1491 0046 07       		.uleb128 0x7
+ 1492 0047 04       		.uleb128 0x4
+ 1493 0048 01       		.byte	0x1
+ 1494 0049 0B       		.uleb128 0xb
+ 1495 004a 0B       		.uleb128 0xb
+ 1496 004b 49       		.uleb128 0x49
+ 1497 004c 13       		.uleb128 0x13
+ 1498 004d 3A       		.uleb128 0x3a
+ 1499 004e 0B       		.uleb128 0xb
+ 1500 004f 3B       		.uleb128 0x3b
+ 1501 0050 0B       		.uleb128 0xb
+ 1502 0051 01       		.uleb128 0x1
+ 1503 0052 13       		.uleb128 0x13
+ 1504 0053 00       		.byte	0
+ 1505 0054 00       		.byte	0
+ 1506 0055 08       		.uleb128 0x8
+ 1507 0056 28       		.uleb128 0x28
+ 1508 0057 00       		.byte	0
+ 1509 0058 03       		.uleb128 0x3
+ 1510 0059 0E       		.uleb128 0xe
+ 1511 005a 1C       		.uleb128 0x1c
+ 1512 005b 0B       		.uleb128 0xb
+ 1513 005c 00       		.byte	0
+ 1514 005d 00       		.byte	0
+ 1515 005e 09       		.uleb128 0x9
+ 1516 005f 16       		.uleb128 0x16
+ 1517 0060 00       		.byte	0
+ 1518 0061 03       		.uleb128 0x3
+ 1519 0062 0E       		.uleb128 0xe
+ 1520 0063 3A       		.uleb128 0x3a
+ 1521 0064 0B       		.uleb128 0xb
+ 1522 0065 3B       		.uleb128 0x3b
+ 1523 0066 0B       		.uleb128 0xb
+ 1524 0067 49       		.uleb128 0x49
+ 1525 0068 13       		.uleb128 0x13
+ 1526 0069 00       		.byte	0
+ 1527 006a 00       		.byte	0
+ 1528 006b 0A       		.uleb128 0xa
+ 1529 006c 2E       		.uleb128 0x2e
+ 1530 006d 01       		.byte	0x1
+ 1531 006e 3F       		.uleb128 0x3f
+ 1532 006f 19       		.uleb128 0x19
+ 1533 0070 03       		.uleb128 0x3
+ 1534 0071 0E       		.uleb128 0xe
+ 1535 0072 3A       		.uleb128 0x3a
+ 1536 0073 0B       		.uleb128 0xb
+ 1537 0074 3B       		.uleb128 0x3b
+ 1538 0075 0B       		.uleb128 0xb
+ 1539 0076 27       		.uleb128 0x27
+ 1540 0077 19       		.uleb128 0x19
+ 1541 0078 11       		.uleb128 0x11
+ARM GAS  C:\Users\YUANFA~1\AppData\Local\Temp\ccFPSgYX.s 			page 30
+
+
+ 1542 0079 01       		.uleb128 0x1
+ 1543 007a 12       		.uleb128 0x12
+ 1544 007b 06       		.uleb128 0x6
+ 1545 007c 40       		.uleb128 0x40
+ 1546 007d 18       		.uleb128 0x18
+ 1547 007e 9742     		.uleb128 0x2117
+ 1548 0080 19       		.uleb128 0x19
+ 1549 0081 01       		.uleb128 0x1
+ 1550 0082 13       		.uleb128 0x13
+ 1551 0083 00       		.byte	0
+ 1552 0084 00       		.byte	0
+ 1553 0085 0B       		.uleb128 0xb
+ 1554 0086 05       		.uleb128 0x5
+ 1555 0087 00       		.byte	0
+ 1556 0088 03       		.uleb128 0x3
+ 1557 0089 08       		.uleb128 0x8
+ 1558 008a 3A       		.uleb128 0x3a
+ 1559 008b 0B       		.uleb128 0xb
+ 1560 008c 3B       		.uleb128 0x3b
+ 1561 008d 0B       		.uleb128 0xb
+ 1562 008e 49       		.uleb128 0x49
+ 1563 008f 13       		.uleb128 0x13
+ 1564 0090 02       		.uleb128 0x2
+ 1565 0091 17       		.uleb128 0x17
+ 1566 0092 00       		.byte	0
+ 1567 0093 00       		.byte	0
+ 1568 0094 0C       		.uleb128 0xc
+ 1569 0095 898201   		.uleb128 0x4109
+ 1570 0098 01       		.byte	0x1
+ 1571 0099 11       		.uleb128 0x11
+ 1572 009a 01       		.uleb128 0x1
+ 1573 009b 31       		.uleb128 0x31
+ 1574 009c 13       		.uleb128 0x13
+ 1575 009d 01       		.uleb128 0x1
+ 1576 009e 13       		.uleb128 0x13
+ 1577 009f 00       		.byte	0
+ 1578 00a0 00       		.byte	0
+ 1579 00a1 0D       		.uleb128 0xd
+ 1580 00a2 8A8201   		.uleb128 0x410a
+ 1581 00a5 00       		.byte	0
+ 1582 00a6 02       		.uleb128 0x2
+ 1583 00a7 18       		.uleb128 0x18
+ 1584 00a8 9142     		.uleb128 0x2111
+ 1585 00aa 18       		.uleb128 0x18
+ 1586 00ab 00       		.byte	0
+ 1587 00ac 00       		.byte	0
+ 1588 00ad 0E       		.uleb128 0xe
+ 1589 00ae 898201   		.uleb128 0x4109
+ 1590 00b1 01       		.byte	0x1
+ 1591 00b2 11       		.uleb128 0x11
+ 1592 00b3 01       		.uleb128 0x1
+ 1593 00b4 31       		.uleb128 0x31
+ 1594 00b5 13       		.uleb128 0x13
+ 1595 00b6 00       		.byte	0
+ 1596 00b7 00       		.byte	0
+ 1597 00b8 0F       		.uleb128 0xf
+ 1598 00b9 05       		.uleb128 0x5
+ARM GAS  C:\Users\YUANFA~1\AppData\Local\Temp\ccFPSgYX.s 			page 31
+
+
+ 1599 00ba 00       		.byte	0
+ 1600 00bb 03       		.uleb128 0x3
+ 1601 00bc 0E       		.uleb128 0xe
+ 1602 00bd 3A       		.uleb128 0x3a
+ 1603 00be 0B       		.uleb128 0xb
+ 1604 00bf 3B       		.uleb128 0x3b
+ 1605 00c0 0B       		.uleb128 0xb
+ 1606 00c1 49       		.uleb128 0x49
+ 1607 00c2 13       		.uleb128 0x13
+ 1608 00c3 02       		.uleb128 0x2
+ 1609 00c4 17       		.uleb128 0x17
+ 1610 00c5 00       		.byte	0
+ 1611 00c6 00       		.byte	0
+ 1612 00c7 10       		.uleb128 0x10
+ 1613 00c8 34       		.uleb128 0x34
+ 1614 00c9 00       		.byte	0
+ 1615 00ca 03       		.uleb128 0x3
+ 1616 00cb 0E       		.uleb128 0xe
+ 1617 00cc 3A       		.uleb128 0x3a
+ 1618 00cd 0B       		.uleb128 0xb
+ 1619 00ce 3B       		.uleb128 0x3b
+ 1620 00cf 0B       		.uleb128 0xb
+ 1621 00d0 49       		.uleb128 0x49
+ 1622 00d1 13       		.uleb128 0x13
+ 1623 00d2 02       		.uleb128 0x2
+ 1624 00d3 18       		.uleb128 0x18
+ 1625 00d4 00       		.byte	0
+ 1626 00d5 00       		.byte	0
+ 1627 00d6 11       		.uleb128 0x11
+ 1628 00d7 34       		.uleb128 0x34
+ 1629 00d8 00       		.byte	0
+ 1630 00d9 03       		.uleb128 0x3
+ 1631 00da 08       		.uleb128 0x8
+ 1632 00db 3A       		.uleb128 0x3a
+ 1633 00dc 0B       		.uleb128 0xb
+ 1634 00dd 3B       		.uleb128 0x3b
+ 1635 00de 0B       		.uleb128 0xb
+ 1636 00df 49       		.uleb128 0x49
+ 1637 00e0 13       		.uleb128 0x13
+ 1638 00e1 00       		.byte	0
+ 1639 00e2 00       		.byte	0
+ 1640 00e3 12       		.uleb128 0x12
+ 1641 00e4 34       		.uleb128 0x34
+ 1642 00e5 00       		.byte	0
+ 1643 00e6 03       		.uleb128 0x3
+ 1644 00e7 0E       		.uleb128 0xe
+ 1645 00e8 3A       		.uleb128 0x3a
+ 1646 00e9 0B       		.uleb128 0xb
+ 1647 00ea 3B       		.uleb128 0x3b
+ 1648 00eb 0B       		.uleb128 0xb
+ 1649 00ec 49       		.uleb128 0x49
+ 1650 00ed 13       		.uleb128 0x13
+ 1651 00ee 02       		.uleb128 0x2
+ 1652 00ef 17       		.uleb128 0x17
+ 1653 00f0 00       		.byte	0
+ 1654 00f1 00       		.byte	0
+ 1655 00f2 13       		.uleb128 0x13
+ARM GAS  C:\Users\YUANFA~1\AppData\Local\Temp\ccFPSgYX.s 			page 32
+
+
+ 1656 00f3 898201   		.uleb128 0x4109
+ 1657 00f6 00       		.byte	0
+ 1658 00f7 11       		.uleb128 0x11
+ 1659 00f8 01       		.uleb128 0x1
+ 1660 00f9 31       		.uleb128 0x31
+ 1661 00fa 13       		.uleb128 0x13
+ 1662 00fb 00       		.byte	0
+ 1663 00fc 00       		.byte	0
+ 1664 00fd 14       		.uleb128 0x14
+ 1665 00fe 34       		.uleb128 0x34
+ 1666 00ff 00       		.byte	0
+ 1667 0100 03       		.uleb128 0x3
+ 1668 0101 08       		.uleb128 0x8
+ 1669 0102 3A       		.uleb128 0x3a
+ 1670 0103 0B       		.uleb128 0xb
+ 1671 0104 3B       		.uleb128 0x3b
+ 1672 0105 0B       		.uleb128 0xb
+ 1673 0106 49       		.uleb128 0x49
+ 1674 0107 13       		.uleb128 0x13
+ 1675 0108 02       		.uleb128 0x2
+ 1676 0109 18       		.uleb128 0x18
+ 1677 010a 00       		.byte	0
+ 1678 010b 00       		.byte	0
+ 1679 010c 15       		.uleb128 0x15
+ 1680 010d 34       		.uleb128 0x34
+ 1681 010e 00       		.byte	0
+ 1682 010f 03       		.uleb128 0x3
+ 1683 0110 08       		.uleb128 0x8
+ 1684 0111 3A       		.uleb128 0x3a
+ 1685 0112 0B       		.uleb128 0xb
+ 1686 0113 3B       		.uleb128 0x3b
+ 1687 0114 0B       		.uleb128 0xb
+ 1688 0115 49       		.uleb128 0x49
+ 1689 0116 13       		.uleb128 0x13
+ 1690 0117 02       		.uleb128 0x2
+ 1691 0118 17       		.uleb128 0x17
+ 1692 0119 00       		.byte	0
+ 1693 011a 00       		.byte	0
+ 1694 011b 16       		.uleb128 0x16
+ 1695 011c 2E       		.uleb128 0x2e
+ 1696 011d 01       		.byte	0x1
+ 1697 011e 3F       		.uleb128 0x3f
+ 1698 011f 19       		.uleb128 0x19
+ 1699 0120 03       		.uleb128 0x3
+ 1700 0121 0E       		.uleb128 0xe
+ 1701 0122 3A       		.uleb128 0x3a
+ 1702 0123 0B       		.uleb128 0xb
+ 1703 0124 3B       		.uleb128 0x3b
+ 1704 0125 0B       		.uleb128 0xb
+ 1705 0126 27       		.uleb128 0x27
+ 1706 0127 19       		.uleb128 0x19
+ 1707 0128 49       		.uleb128 0x49
+ 1708 0129 13       		.uleb128 0x13
+ 1709 012a 3C       		.uleb128 0x3c
+ 1710 012b 19       		.uleb128 0x19
+ 1711 012c 01       		.uleb128 0x1
+ 1712 012d 13       		.uleb128 0x13
+ARM GAS  C:\Users\YUANFA~1\AppData\Local\Temp\ccFPSgYX.s 			page 33
+
+
+ 1713 012e 00       		.byte	0
+ 1714 012f 00       		.byte	0
+ 1715 0130 17       		.uleb128 0x17
+ 1716 0131 05       		.uleb128 0x5
+ 1717 0132 00       		.byte	0
+ 1718 0133 49       		.uleb128 0x49
+ 1719 0134 13       		.uleb128 0x13
+ 1720 0135 00       		.byte	0
+ 1721 0136 00       		.byte	0
+ 1722 0137 18       		.uleb128 0x18
+ 1723 0138 18       		.uleb128 0x18
+ 1724 0139 00       		.byte	0
+ 1725 013a 00       		.byte	0
+ 1726 013b 00       		.byte	0
+ 1727 013c 19       		.uleb128 0x19
+ 1728 013d 01       		.uleb128 0x1
+ 1729 013e 01       		.byte	0x1
+ 1730 013f 49       		.uleb128 0x49
+ 1731 0140 13       		.uleb128 0x13
+ 1732 0141 01       		.uleb128 0x1
+ 1733 0142 13       		.uleb128 0x13
+ 1734 0143 00       		.byte	0
+ 1735 0144 00       		.byte	0
+ 1736 0145 1A       		.uleb128 0x1a
+ 1737 0146 21       		.uleb128 0x21
+ 1738 0147 00       		.byte	0
+ 1739 0148 49       		.uleb128 0x49
+ 1740 0149 13       		.uleb128 0x13
+ 1741 014a 2F       		.uleb128 0x2f
+ 1742 014b 0B       		.uleb128 0xb
+ 1743 014c 00       		.byte	0
+ 1744 014d 00       		.byte	0
+ 1745 014e 1B       		.uleb128 0x1b
+ 1746 014f 2E       		.uleb128 0x2e
+ 1747 0150 01       		.byte	0x1
+ 1748 0151 3F       		.uleb128 0x3f
+ 1749 0152 19       		.uleb128 0x19
+ 1750 0153 03       		.uleb128 0x3
+ 1751 0154 0E       		.uleb128 0xe
+ 1752 0155 3A       		.uleb128 0x3a
+ 1753 0156 0B       		.uleb128 0xb
+ 1754 0157 3B       		.uleb128 0x3b
+ 1755 0158 0B       		.uleb128 0xb
+ 1756 0159 11       		.uleb128 0x11
+ 1757 015a 01       		.uleb128 0x1
+ 1758 015b 12       		.uleb128 0x12
+ 1759 015c 06       		.uleb128 0x6
+ 1760 015d 40       		.uleb128 0x40
+ 1761 015e 18       		.uleb128 0x18
+ 1762 015f 9742     		.uleb128 0x2117
+ 1763 0161 19       		.uleb128 0x19
+ 1764 0162 01       		.uleb128 0x1
+ 1765 0163 13       		.uleb128 0x13
+ 1766 0164 00       		.byte	0
+ 1767 0165 00       		.byte	0
+ 1768 0166 1C       		.uleb128 0x1c
+ 1769 0167 2E       		.uleb128 0x2e
+ARM GAS  C:\Users\YUANFA~1\AppData\Local\Temp\ccFPSgYX.s 			page 34
+
+
+ 1770 0168 01       		.byte	0x1
+ 1771 0169 3F       		.uleb128 0x3f
+ 1772 016a 19       		.uleb128 0x19
+ 1773 016b 03       		.uleb128 0x3
+ 1774 016c 0E       		.uleb128 0xe
+ 1775 016d 3A       		.uleb128 0x3a
+ 1776 016e 0B       		.uleb128 0xb
+ 1777 016f 3B       		.uleb128 0x3b
+ 1778 0170 0B       		.uleb128 0xb
+ 1779 0171 27       		.uleb128 0x27
+ 1780 0172 19       		.uleb128 0x19
+ 1781 0173 49       		.uleb128 0x49
+ 1782 0174 13       		.uleb128 0x13
+ 1783 0175 8701     		.uleb128 0x87
+ 1784 0177 19       		.uleb128 0x19
+ 1785 0178 11       		.uleb128 0x11
+ 1786 0179 01       		.uleb128 0x1
+ 1787 017a 12       		.uleb128 0x12
+ 1788 017b 06       		.uleb128 0x6
+ 1789 017c 40       		.uleb128 0x40
+ 1790 017d 18       		.uleb128 0x18
+ 1791 017e 9742     		.uleb128 0x2117
+ 1792 0180 19       		.uleb128 0x19
+ 1793 0181 01       		.uleb128 0x1
+ 1794 0182 13       		.uleb128 0x13
+ 1795 0183 00       		.byte	0
+ 1796 0184 00       		.byte	0
+ 1797 0185 1D       		.uleb128 0x1d
+ 1798 0186 2E       		.uleb128 0x2e
+ 1799 0187 00       		.byte	0
+ 1800 0188 3F       		.uleb128 0x3f
+ 1801 0189 19       		.uleb128 0x19
+ 1802 018a 3C       		.uleb128 0x3c
+ 1803 018b 19       		.uleb128 0x19
+ 1804 018c 6E       		.uleb128 0x6e
+ 1805 018d 0E       		.uleb128 0xe
+ 1806 018e 03       		.uleb128 0x3
+ 1807 018f 0E       		.uleb128 0xe
+ 1808 0190 3A       		.uleb128 0x3a
+ 1809 0191 0B       		.uleb128 0xb
+ 1810 0192 3B       		.uleb128 0x3b
+ 1811 0193 05       		.uleb128 0x5
+ 1812 0194 00       		.byte	0
+ 1813 0195 00       		.byte	0
+ 1814 0196 1E       		.uleb128 0x1e
+ 1815 0197 2E       		.uleb128 0x2e
+ 1816 0198 00       		.byte	0
+ 1817 0199 3F       		.uleb128 0x3f
+ 1818 019a 19       		.uleb128 0x19
+ 1819 019b 3C       		.uleb128 0x3c
+ 1820 019c 19       		.uleb128 0x19
+ 1821 019d 6E       		.uleb128 0x6e
+ 1822 019e 0E       		.uleb128 0xe
+ 1823 019f 03       		.uleb128 0x3
+ 1824 01a0 0E       		.uleb128 0xe
+ 1825 01a1 3A       		.uleb128 0x3a
+ 1826 01a2 0B       		.uleb128 0xb
+ARM GAS  C:\Users\YUANFA~1\AppData\Local\Temp\ccFPSgYX.s 			page 35
+
+
+ 1827 01a3 3B       		.uleb128 0x3b
+ 1828 01a4 0B       		.uleb128 0xb
+ 1829 01a5 00       		.byte	0
+ 1830 01a6 00       		.byte	0
+ 1831 01a7 00       		.byte	0
+ 1832              		.section	.debug_loc,"",%progbits
+ 1833              	.Ldebug_loc0:
+ 1834              	.LLST0:
+ 1835 0000 00000000 		.4byte	.LVL0
+ 1836 0004 05000000 		.4byte	.LVL1-1
+ 1837 0008 0100     		.2byte	0x1
+ 1838 000a 50       		.byte	0x50
+ 1839 000b 05000000 		.4byte	.LVL1-1
+ 1840 000f 14000000 		.4byte	.LFE33
+ 1841 0013 0400     		.2byte	0x4
+ 1842 0015 F3       		.byte	0xf3
+ 1843 0016 01       		.uleb128 0x1
+ 1844 0017 50       		.byte	0x50
+ 1845 0018 9F       		.byte	0x9f
+ 1846 0019 00000000 		.4byte	0
+ 1847 001d 00000000 		.4byte	0
+ 1848              	.LLST1:
+ 1849 0021 00000000 		.4byte	.LVL3
+ 1850 0025 08000000 		.4byte	.LVL4
+ 1851 0029 0100     		.2byte	0x1
+ 1852 002b 50       		.byte	0x50
+ 1853 002c 08000000 		.4byte	.LVL4
+ 1854 0030 5C000000 		.4byte	.LFE34
+ 1855 0034 0400     		.2byte	0x4
+ 1856 0036 F3       		.byte	0xf3
+ 1857 0037 01       		.uleb128 0x1
+ 1858 0038 50       		.byte	0x50
+ 1859 0039 9F       		.byte	0x9f
+ 1860 003a 00000000 		.4byte	0
+ 1861 003e 00000000 		.4byte	0
+ 1862              	.LLST2:
+ 1863 0042 00000000 		.4byte	.LVL11
+ 1864 0046 11000000 		.4byte	.LVL12-1
+ 1865 004a 0100     		.2byte	0x1
+ 1866 004c 50       		.byte	0x50
+ 1867 004d 11000000 		.4byte	.LVL12-1
+ 1868 0051 1C000000 		.4byte	.LVL14
+ 1869 0055 0100     		.2byte	0x1
+ 1870 0057 55       		.byte	0x55
+ 1871 0058 1C000000 		.4byte	.LVL14
+ 1872 005c 68000000 		.4byte	.LFE35
+ 1873 0060 0400     		.2byte	0x4
+ 1874 0062 F3       		.byte	0xf3
+ 1875 0063 01       		.uleb128 0x1
+ 1876 0064 50       		.byte	0x50
+ 1877 0065 9F       		.byte	0x9f
+ 1878 0066 00000000 		.4byte	0
+ 1879 006a 00000000 		.4byte	0
+ 1880              	.LLST3:
+ 1881 006e 00000000 		.4byte	.LVL11
+ 1882 0072 11000000 		.4byte	.LVL12-1
+ 1883 0076 0100     		.2byte	0x1
+ARM GAS  C:\Users\YUANFA~1\AppData\Local\Temp\ccFPSgYX.s 			page 36
+
+
+ 1884 0078 51       		.byte	0x51
+ 1885 0079 11000000 		.4byte	.LVL12-1
+ 1886 007d 52000000 		.4byte	.LVL23
+ 1887 0081 0100     		.2byte	0x1
+ 1888 0083 56       		.byte	0x56
+ 1889 0084 52000000 		.4byte	.LVL23
+ 1890 0088 68000000 		.4byte	.LFE35
+ 1891 008c 0400     		.2byte	0x4
+ 1892 008e F3       		.byte	0xf3
+ 1893 008f 01       		.uleb128 0x1
+ 1894 0090 51       		.byte	0x51
+ 1895 0091 9F       		.byte	0x9f
+ 1896 0092 00000000 		.4byte	0
+ 1897 0096 00000000 		.4byte	0
+ 1898              	.LLST4:
+ 1899 009a 1C000000 		.4byte	.LVL14
+ 1900 009e 1E000000 		.4byte	.LVL15
+ 1901 00a2 0100     		.2byte	0x1
+ 1902 00a4 50       		.byte	0x50
+ 1903 00a5 1E000000 		.4byte	.LVL15
+ 1904 00a9 52000000 		.4byte	.LVL22
+ 1905 00ad 0100     		.2byte	0x1
+ 1906 00af 55       		.byte	0x55
+ 1907 00b0 00000000 		.4byte	0
+ 1908 00b4 00000000 		.4byte	0
+ 1909              	.LLST5:
+ 1910 00b8 00000000 		.4byte	.LVL24
+ 1911 00bc 0B000000 		.4byte	.LVL25-1
+ 1912 00c0 0100     		.2byte	0x1
+ 1913 00c2 50       		.byte	0x50
+ 1914 00c3 0B000000 		.4byte	.LVL25-1
+ 1915 00c7 30000000 		.4byte	.LFE36
+ 1916 00cb 0400     		.2byte	0x4
+ 1917 00cd F3       		.byte	0xf3
+ 1918 00ce 01       		.uleb128 0x1
+ 1919 00cf 50       		.byte	0x50
+ 1920 00d0 9F       		.byte	0x9f
+ 1921 00d1 00000000 		.4byte	0
+ 1922 00d5 00000000 		.4byte	0
+ 1923              	.LLST6:
+ 1924 00d9 00000000 		.4byte	.LVL24
+ 1925 00dd 0B000000 		.4byte	.LVL25-1
+ 1926 00e1 0100     		.2byte	0x1
+ 1927 00e3 51       		.byte	0x51
+ 1928 00e4 0B000000 		.4byte	.LVL25-1
+ 1929 00e8 30000000 		.4byte	.LFE36
+ 1930 00ec 0400     		.2byte	0x4
+ 1931 00ee F3       		.byte	0xf3
+ 1932 00ef 01       		.uleb128 0x1
+ 1933 00f0 51       		.byte	0x51
+ 1934 00f1 9F       		.byte	0x9f
+ 1935 00f2 00000000 		.4byte	0
+ 1936 00f6 00000000 		.4byte	0
+ 1937              	.LLST7:
+ 1938 00fa 0E000000 		.4byte	.LVL26
+ 1939 00fe 12000000 		.4byte	.LVL27
+ 1940 0102 0100     		.2byte	0x1
+ARM GAS  C:\Users\YUANFA~1\AppData\Local\Temp\ccFPSgYX.s 			page 37
+
+
+ 1941 0104 50       		.byte	0x50
+ 1942 0105 12000000 		.4byte	.LVL27
+ 1943 0109 15000000 		.4byte	.LVL28-1
+ 1944 010d 0100     		.2byte	0x1
+ 1945 010f 52       		.byte	0x52
+ 1946 0110 00000000 		.4byte	0
+ 1947 0114 00000000 		.4byte	0
+ 1948              		.section	.debug_aranges,"",%progbits
+ 1949 0000 44000000 		.4byte	0x44
+ 1950 0004 0200     		.2byte	0x2
+ 1951 0006 00000000 		.4byte	.Ldebug_info0
+ 1952 000a 04       		.byte	0x4
+ 1953 000b 00       		.byte	0
+ 1954 000c 0000     		.2byte	0
+ 1955 000e 0000     		.2byte	0
+ 1956 0010 00000000 		.4byte	.LFB33
+ 1957 0014 14000000 		.4byte	.LFE33-.LFB33
+ 1958 0018 00000000 		.4byte	.LFB34
+ 1959 001c 5C000000 		.4byte	.LFE34-.LFB34
+ 1960 0020 00000000 		.4byte	.LFB35
+ 1961 0024 68000000 		.4byte	.LFE35-.LFB35
+ 1962 0028 00000000 		.4byte	.LFB36
+ 1963 002c 30000000 		.4byte	.LFE36-.LFB36
+ 1964 0030 00000000 		.4byte	.LFB37
+ 1965 0034 A8000000 		.4byte	.LFE37-.LFB37
+ 1966 0038 00000000 		.4byte	.LFB38
+ 1967 003c 2C000000 		.4byte	.LFE38-.LFB38
+ 1968 0040 00000000 		.4byte	0
+ 1969 0044 00000000 		.4byte	0
+ 1970              		.section	.debug_ranges,"",%progbits
+ 1971              	.Ldebug_ranges0:
+ 1972 0000 00000000 		.4byte	.LFB33
+ 1973 0004 14000000 		.4byte	.LFE33
+ 1974 0008 00000000 		.4byte	.LFB34
+ 1975 000c 5C000000 		.4byte	.LFE34
+ 1976 0010 00000000 		.4byte	.LFB35
+ 1977 0014 68000000 		.4byte	.LFE35
+ 1978 0018 00000000 		.4byte	.LFB36
+ 1979 001c 30000000 		.4byte	.LFE36
+ 1980 0020 00000000 		.4byte	.LFB37
+ 1981 0024 A8000000 		.4byte	.LFE37
+ 1982 0028 00000000 		.4byte	.LFB38
+ 1983 002c 2C000000 		.4byte	.LFE38
+ 1984 0030 00000000 		.4byte	0
+ 1985 0034 00000000 		.4byte	0
+ 1986              		.section	.debug_line,"",%progbits
+ 1987              	.Ldebug_line0:
+ 1988 0000 8C010000 		.section	.debug_str,"MS",%progbits,1
+ 1988      0200D200 
+ 1988      00000201 
+ 1988      FB0E0D00 
+ 1988      01010101 
+ 1989              	.LASF26:
+ 1990 0000 73746174 		.ascii	"state\000"
+ 1990      6500
+ 1991              	.LASF25:
+ 1992 0006 67657443 		.ascii	"getCapSenseState\000"
+ARM GAS  C:\Users\YUANFA~1\AppData\Local\Temp\ccFPSgYX.s 			page 38
+
+
+ 1992      61705365 
+ 1992      6E736553 
+ 1992      74617465 
+ 1992      00
+ 1993              	.LASF20:
+ 1994 0017 43617053 		.ascii	"CapSense_TST_MEASUREMENT_OVERFLOW\000"
+ 1994      656E7365 
+ 1994      5F545354 
+ 1994      5F4D4541 
+ 1994      53555245 
+ 1995              	.LASF23:
+ 1996 0039 43617053 		.ascii	"CapSense_TST_MEASUREMENT_STATUS_ENUM\000"
+ 1996      656E7365 
+ 1996      5F545354 
+ 1996      5F4D4541 
+ 1996      53555245 
+ 1997              	.LASF17:
+ 1998 005e 43617053 		.ascii	"CapSense_TST_MEASUREMENT_ERROR\000"
+ 1998      656E7365 
+ 1998      5F545354 
+ 1998      5F4D4541 
+ 1998      53555245 
+ 1999              	.LASF21:
+ 2000 007d 43617053 		.ascii	"CapSense_TST_MEASUREMENT_TIMEOUT\000"
+ 2000      656E7365 
+ 2000      5F545354 
+ 2000      5F4D4541 
+ 2000      53555245 
+ 2001              	.LASF3:
+ 2002 009e 73686F72 		.ascii	"short unsigned int\000"
+ 2002      7420756E 
+ 2002      7369676E 
+ 2002      65642069 
+ 2002      6E7400
+ 2003              	.LASF15:
+ 2004 00b1 43617053 		.ascii	"CapSense_TST_MEASUREMENT_BAD_PARAM\000"
+ 2004      656E7365 
+ 2004      5F545354 
+ 2004      5F4D4541 
+ 2004      53555245 
+ 2005              	.LASF36:
+ 2006 00d4 43617053 		.ascii	"CapSense_Start\000"
+ 2006      656E7365 
+ 2006      5F537461 
+ 2006      727400
+ 2007              	.LASF10:
+ 2008 00e3 646F7562 		.ascii	"double\000"
+ 2008      6C6500
+ 2009              	.LASF42:
+ 2010 00ea 5C5C4D61 		.ascii	"\\\\Mac\\Home\\Documents\\PSoC Creator\\touch-panel"
+ 2010      635C486F 
+ 2010      6D655C44 
+ 2010      6F63756D 
+ 2010      656E7473 
+ 2011 0117 5C434330 		.ascii	"\\CC03\\CC03_CSD\\wk1.cydsn\000"
+ 2011      335C4343 
+ 2011      30335F43 
+ARM GAS  C:\Users\YUANFA~1\AppData\Local\Temp\ccFPSgYX.s 			page 39
+
+
+ 2011      53445C77 
+ 2011      6B312E63 
+ 2012              	.LASF31:
+ 2013 0130 55415254 		.ascii	"UART_UartPutString\000"
+ 2013      5F556172 
+ 2013      74507574 
+ 2013      53747269 
+ 2013      6E6700
+ 2014              	.LASF9:
+ 2015 0143 666C6F61 		.ascii	"float\000"
+ 2015      7400
+ 2016              	.LASF39:
+ 2017 0149 43617053 		.ascii	"CapSense_ScanAllWidgets\000"
+ 2017      656E7365 
+ 2017      5F536361 
+ 2017      6E416C6C 
+ 2017      57696467 
+ 2018              	.LASF1:
+ 2019 0161 756E7369 		.ascii	"unsigned char\000"
+ 2019      676E6564 
+ 2019      20636861 
+ 2019      7200
+ 2020              	.LASF30:
+ 2021 016f 67657443 		.ascii	"getCapacitanceValueCSD\000"
+ 2021      61706163 
+ 2021      6974616E 
+ 2021      63655661 
+ 2021      6C756543 
+ 2022              	.LASF5:
+ 2023 0186 6C6F6E67 		.ascii	"long unsigned int\000"
+ 2023      20756E73 
+ 2023      69676E65 
+ 2023      6420696E 
+ 2023      7400
+ 2024              	.LASF35:
+ 2025 0198 55415254 		.ascii	"UART_Start\000"
+ 2025      5F537461 
+ 2025      727400
+ 2026              	.LASF14:
+ 2027 01a3 43617053 		.ascii	"CapSense_TST_MEASUREMENT_SUCCESS\000"
+ 2027      656E7365 
+ 2027      5F545354 
+ 2027      5F4D4541 
+ 2027      53555245 
+ 2028              	.LASF18:
+ 2029 01c4 43617053 		.ascii	"CapSense_TST_MEASUREMENT_LOW_LIMIT\000"
+ 2029      656E7365 
+ 2029      5F545354 
+ 2029      5F4D4541 
+ 2029      53555245 
+ 2030              	.LASF43:
+ 2031 01e7 5072696E 		.ascii	"PrintAll\000"
+ 2031      74416C6C 
+ 2031      00
+ 2032              	.LASF44:
+ 2033 01f0 6D61696E 		.ascii	"main\000"
+ 2033      00
+ARM GAS  C:\Users\YUANFA~1\AppData\Local\Temp\ccFPSgYX.s 			page 40
+
+
+ 2034              	.LASF22:
+ 2035 01f5 75696E74 		.ascii	"uint32\000"
+ 2035      333200
+ 2036              	.LASF8:
+ 2037 01fc 756E7369 		.ascii	"unsigned int\000"
+ 2037      676E6564 
+ 2037      20696E74 
+ 2037      00
+ 2038              	.LASF7:
+ 2039 0209 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 2039      206C6F6E 
+ 2039      6720756E 
+ 2039      7369676E 
+ 2039      65642069 
+ 2040              	.LASF29:
+ 2041 0220 73746174 		.ascii	"stateElectrode\000"
+ 2041      65456C65 
+ 2041      6374726F 
+ 2041      646500
+ 2042              	.LASF37:
+ 2043 022f 43617053 		.ascii	"CapSense_ProcessAllWidgets\000"
+ 2043      656E7365 
+ 2043      5F50726F 
+ 2043      63657373 
+ 2043      416C6C57 
+ 2044              	.LASF13:
+ 2045 024a 73697A65 		.ascii	"sizetype\000"
+ 2045      74797065 
+ 2045      00
+ 2046              	.LASF27:
+ 2047 0253 73686F77 		.ascii	"showElectrodeIsShorted\000"
+ 2047      456C6563 
+ 2047      74726F64 
+ 2047      65497353 
+ 2047      686F7274 
+ 2048              	.LASF6:
+ 2049 026a 6C6F6E67 		.ascii	"long long int\000"
+ 2049      206C6F6E 
+ 2049      6720696E 
+ 2049      7400
+ 2050              	.LASF41:
+ 2051 0278 6D61696E 		.ascii	"main.c\000"
+ 2051      2E6300
+ 2052              	.LASF11:
+ 2053 027f 63686172 		.ascii	"char\000"
+ 2053      00
+ 2054              	.LASF24:
+ 2055 0284 7072696E 		.ascii	"print\000"
+ 2055      7400
+ 2056              	.LASF16:
+ 2057 028a 43617053 		.ascii	"CapSense_TST_MEASUREMENT_BAD_DATA\000"
+ 2057      656E7365 
+ 2057      5F545354 
+ 2057      5F4D4541 
+ 2057      53555245 
+ 2058              	.LASF2:
+ 2059 02ac 73686F72 		.ascii	"short int\000"
+ARM GAS  C:\Users\YUANFA~1\AppData\Local\Temp\ccFPSgYX.s 			page 41
+
+
+ 2059      7420696E 
+ 2059      7400
+ 2060              	.LASF28:
+ 2061 02b6 73746174 		.ascii	"stateParam\000"
+ 2061      65506172 
+ 2061      616D00
+ 2062              	.LASF19:
+ 2063 02c1 43617053 		.ascii	"CapSense_TST_MEASUREMENT_HIGH_LIMIT\000"
+ 2063      656E7365 
+ 2063      5F545354 
+ 2063      5F4D4541 
+ 2063      53555245 
+ 2064              	.LASF4:
+ 2065 02e5 6C6F6E67 		.ascii	"long int\000"
+ 2065      20696E74 
+ 2065      00
+ 2066              	.LASF12:
+ 2067 02ee 6C6F6E67 		.ascii	"long double\000"
+ 2067      20646F75 
+ 2067      626C6500 
+ 2068              	.LASF40:
+ 2069 02fa 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 2069      43313120 
+ 2069      352E342E 
+ 2069      31203230 
+ 2069      31363036 
+ 2070 032d 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0plus -mthumb -"
+ 2070      20726576 
+ 2070      6973696F 
+ 2070      6E203233 
+ 2070      37373135 
+ 2071 0360 67202D4F 		.ascii	"g -Og -ffunction-sections -ffat-lto-objects\000"
+ 2071      67202D66 
+ 2071      66756E63 
+ 2071      74696F6E 
+ 2071      2D736563 
+ 2072              	.LASF0:
+ 2073 038c 7369676E 		.ascii	"signed char\000"
+ 2073      65642063 
+ 2073      68617200 
+ 2074              	.LASF32:
+ 2075 0398 43617053 		.ascii	"CapSense_GetSensorCapacitance\000"
+ 2075      656E7365 
+ 2075      5F476574 
+ 2075      53656E73 
+ 2075      6F724361 
+ 2076              	.LASF34:
+ 2077 03b6 73707269 		.ascii	"sprintf\000"
+ 2077      6E746600 
+ 2078              	.LASF38:
+ 2079 03be 43794465 		.ascii	"CyDelay\000"
+ 2079      6C617900 
+ 2080              	.LASF33:
+ 2081 03c6 43617053 		.ascii	"CapSense_CheckIntegritySensorPins\000"
+ 2081      656E7365 
+ 2081      5F436865 
+ 2081      636B496E 
+ARM GAS  C:\Users\YUANFA~1\AppData\Local\Temp\ccFPSgYX.s 			page 42
+
+
+ 2081      74656772 
+ 2082              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
